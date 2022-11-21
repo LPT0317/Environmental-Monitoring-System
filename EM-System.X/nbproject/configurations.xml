@@ -5,6 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Core/Inc/main.h</itemPath>
+      <itemPath>Drivers/Inc/pic18f4620_tim.h</itemPath>
+      <itemPath>Drivers/Inc/pic18f4620_def.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
