@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Timer/timer_software.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o
 
 # Source Files
-SOURCEFILES=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c
+SOURCEFILES=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c
 
 
 
@@ -106,7 +106,7 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -114,7 +114,7 @@ ${OBJECTDIR}/Drivers/p18f4620_tim.o: Drivers/p18f4620_tim.c  nbproject/Makefile-
 	@${MKDIR} "${OBJECTDIR}/Drivers" 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_tim.o.d 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_tim.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_tim.o   Drivers/p18f4620_tim.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_tim.o   Drivers/p18f4620_tim.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_tim.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_tim.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -122,16 +122,24 @@ ${OBJECTDIR}/Drivers/p18f4620_interrupt.o: Drivers/p18f4620_interrupt.c  nbproje
 	@${MKDIR} "${OBJECTDIR}/Drivers" 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_interrupt.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_interrupt.o   Drivers/p18f4620_interrupt.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_interrupt.o   Drivers/p18f4620_interrupt.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Timer/timer_software.o: Timer/timer_software.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Timer" 
+	@${RM} ${OBJECTDIR}/Timer/timer_software.o.d 
+	@${RM} ${OBJECTDIR}/Timer/timer_software.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Timer/timer_software.o   Timer/timer_software.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Timer/timer_software.o 
+	@${FIXDEPS} "${OBJECTDIR}/Timer/timer_software.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
 	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -139,7 +147,7 @@ ${OBJECTDIR}/Drivers/p18f4620_tim.o: Drivers/p18f4620_tim.c  nbproject/Makefile-
 	@${MKDIR} "${OBJECTDIR}/Drivers" 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_tim.o.d 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_tim.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_tim.o   Drivers/p18f4620_tim.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_tim.o   Drivers/p18f4620_tim.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_tim.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_tim.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
@@ -147,9 +155,17 @@ ${OBJECTDIR}/Drivers/p18f4620_interrupt.o: Drivers/p18f4620_interrupt.c  nbproje
 	@${MKDIR} "${OBJECTDIR}/Drivers" 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_interrupt.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_interrupt.o   Drivers/p18f4620_interrupt.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_interrupt.o   Drivers/p18f4620_interrupt.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Timer/timer_software.o: Timer/timer_software.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Timer" 
+	@${RM} ${OBJECTDIR}/Timer/timer_software.o.d 
+	@${RM} ${OBJECTDIR}/Timer/timer_software.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Timer/timer_software.o   Timer/timer_software.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Timer/timer_software.o 
+	@${FIXDEPS} "${OBJECTDIR}/Timer/timer_software.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

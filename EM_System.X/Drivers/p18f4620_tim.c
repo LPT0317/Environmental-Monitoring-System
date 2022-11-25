@@ -107,7 +107,3 @@ void PIC_TIM3_STOP(void)
 {
   T3CONbits.TMR3ON = 0;
 }
-void TIM3_CALLBACK(void)
-{
-  
-}
