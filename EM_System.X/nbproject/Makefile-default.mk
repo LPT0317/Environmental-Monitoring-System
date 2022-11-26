@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c Drivers/p18f4620_gpio.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Timer/timer_software.o.d ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Timer/timer_software.o.d ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d ${OBJECTDIR}/Drivers/p18f4620_lcd.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o
 
 # Source Files
-SOURCEFILES=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c Drivers/p18f4620_gpio.c
+SOURCEFILES=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c
 
 
 
@@ -142,6 +142,14 @@ ${OBJECTDIR}/Drivers/p18f4620_gpio.o: Drivers/p18f4620_gpio.c  nbproject/Makefil
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_gpio.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_gpio.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/Drivers/p18f4620_lcd.o: Drivers/p18f4620_lcd.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Drivers" 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_lcd.o.d 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_lcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_lcd.o   Drivers/p18f4620_lcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_lcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_lcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -182,6 +190,14 @@ ${OBJECTDIR}/Drivers/p18f4620_gpio.o: Drivers/p18f4620_gpio.c  nbproject/Makefil
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_gpio.o   Drivers/p18f4620_gpio.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_gpio.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_gpio.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Drivers/p18f4620_lcd.o: Drivers/p18f4620_lcd.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Drivers" 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_lcd.o.d 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_lcd.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_lcd.o   Drivers/p18f4620_lcd.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_lcd.o 
+	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_lcd.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

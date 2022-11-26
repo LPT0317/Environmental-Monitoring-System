@@ -9,6 +9,7 @@
 #include "Drivers/p18f4620_tim.h"
 #include "Drivers/p18f4620_interrupt.h"
 #include "Drivers/p18f4620_gpio.h"
+#include "Drivers/p18f4620_lcd.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -17,8 +18,6 @@
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
-int i = 0;
-unsigned char mask[4] = {0x10, 0x20, 0x40, 0x80};
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_TIM3_INIT(void);
@@ -36,7 +35,7 @@ static void MX_GPIO_INIT(void);
 void main(void)
 {
   /* USER CODE BEGIN SysInit */
-  TRISB = 0x00;
+  
   /* USER CODE END SysInit */
   
   /* USER CODE BEGIN Init */
@@ -48,16 +47,13 @@ void main(void)
   MX_GPIO_INIT();
   
   /* USER CODE BEGIN 2 */
-  PORTB = 0x00;
+  LCD_Print_String_x_y(1, 0, "Hello");
+  LCD_Print_String_x_y(2, 0, "Vo Duc Minh");
   /* USER CODE END 2 */
   /* Infinite loop */
   while(1)
   {
-    for(i = 0; i < 8; i++)
-    {
-      if(PIC_GPIO_ReadPin(i) == 1)
-        PORTB = i;
-    }
+      
   }
 }
 
@@ -69,6 +65,7 @@ void main(void)
 static void MX_GPIO_INIT(void)
 {
   PIC_BUTTON_INIT();
+  LCD_INIT();
 }
 
 /**

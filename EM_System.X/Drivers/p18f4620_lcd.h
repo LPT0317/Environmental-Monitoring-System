@@ -13,7 +13,20 @@ extern "C"
 {
 #endif
 
-
+/* Includes ------------------------------------------------------------------*/
+#include <p18f4620.h>
+  
+/* Defines PORT --------------------------------------------------------------*/
+#define RS PORTBbits.RB2
+#define EN PORTBbits.RB3
+#define LCD_PORT PORTB
+#define LCD_DDR TRISB
+  
+/* Function prototypes -------------------------------------------------------*/
+void LCD_Command(unsigned char cmd);
+void LCD_INIT(void);
+void LCD_Print_String_x_y(char row, char pos, unsigned char *data);
+void LCD_Clear();
 
 
 #ifdef	__cplusplus
