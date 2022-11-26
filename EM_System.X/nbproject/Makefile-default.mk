@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c Drivers/p18f4620_gpio.c Button/button.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Timer/timer_software.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Button/button.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Timer/timer_software.o.d ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d ${OBJECTDIR}/Button/button.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Timer/timer_software.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Button/button.o
 
 # Source Files
-SOURCEFILES=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c
+SOURCEFILES=main.c Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Timer/timer_software.c Drivers/p18f4620_gpio.c Button/button.c
 
 
 
@@ -134,6 +134,22 @@ ${OBJECTDIR}/Timer/timer_software.o: Timer/timer_software.c  nbproject/Makefile-
 	@${DEP_GEN} -d ${OBJECTDIR}/Timer/timer_software.o 
 	@${FIXDEPS} "${OBJECTDIR}/Timer/timer_software.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/Drivers/p18f4620_gpio.o: Drivers/p18f4620_gpio.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Drivers" 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_gpio.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_gpio.o   Drivers/p18f4620_gpio.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_gpio.o 
+	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_gpio.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Button/button.o: Button/button.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Button" 
+	@${RM} ${OBJECTDIR}/Button/button.o.d 
+	@${RM} ${OBJECTDIR}/Button/button.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Button/button.o   Button/button.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Button/button.o 
+	@${FIXDEPS} "${OBJECTDIR}/Button/button.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -166,6 +182,22 @@ ${OBJECTDIR}/Timer/timer_software.o: Timer/timer_software.c  nbproject/Makefile-
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Timer/timer_software.o   Timer/timer_software.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Timer/timer_software.o 
 	@${FIXDEPS} "${OBJECTDIR}/Timer/timer_software.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Drivers/p18f4620_gpio.o: Drivers/p18f4620_gpio.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Drivers" 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_gpio.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_gpio.o   Drivers/p18f4620_gpio.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_gpio.o 
+	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_gpio.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Button/button.o: Button/button.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Button" 
+	@${RM} ${OBJECTDIR}/Button/button.o.d 
+	@${RM} ${OBJECTDIR}/Button/button.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Button/button.o   Button/button.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Button/button.o 
+	@${FIXDEPS} "${OBJECTDIR}/Button/button.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

@@ -8,10 +8,12 @@
 #include "main.h"
 #include "Drivers/p18f4620_tim.h"
 #include "Drivers/p18f4620_interrupt.h"
+#include "Drivers/p18f4620_gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Timer/timer_software.h"
+#include "Button/button.h"
 
 /* USER CODE END Includes */
 
@@ -19,6 +21,7 @@
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_TIM3_INIT(void);
+static void MX_GPIO_INIT(void);
 
 /* USER CODE BEGIN PFP */
 
@@ -41,21 +44,29 @@ void main(void)
   
   /* Initialize all configured peripherals */
   MX_TIM3_INIT();
+  MX_GPIO_INIT();
   
   /* USER CODE BEGIN 2 */
-  PORTB = 0b01010011;
-  set_Timer(0, 1000);
-  
+  PORTB= 0x00;
   /* USER CODE END 2 */
   /* Infinite loop */
   while(1)
   {
-    if(is_Timer_Out(0) == 1)
-    {
-      PORTB = ~PORTB;
-      set_Timer(0, 1000);
-    }
+      if(is_Button_Pressed(GPIO_PIN_1) == 1)
+        PORTB = 0xff;
+      else
+        PORTB = 0x00;
   }
+}
+
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_INIT(void)
+{
+  PIC_BUTTON_INIT();
 }
 
 /**
@@ -74,5 +85,7 @@ static void MX_TIM3_INIT(void)
 void TIM3_CALLBACK(void)
 {
   timer_Run();
+  PIC_SCAN_BUTTON();
+  getKeyInput();
 }
 /*****************************END OF FILE**************************************/
