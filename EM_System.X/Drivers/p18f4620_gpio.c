@@ -7,7 +7,7 @@
 unsigned char scan_output[MAX_ROW] = {0x10,0x20};
 unsigned char scan_input[MAX_COL] = {0x01,0x02,0x04,0x08};
 
-unsigned int button_res[NO_BUTTON] = {1};
+unsigned int button_res[NO_BUTTON] = {0};
 
 /* Function prototypes -------------------------------------------------------*/
 void PIC_BUTTON_INIT(void)
@@ -27,11 +27,11 @@ void PIC_SCAN_BUTTON(void)
     {
         if((PORTC & scan_input[j]) == 0)
         {
-            button_res[i * MAX_ROW + j] = 0;
+            button_res[i * MAX_ROW + j] = 1;
         }
         else
         {
-            button_res[i * MAX_ROW + j] = 1;
+            button_res[i * MAX_ROW + j] = 0;
         }
     }
   }

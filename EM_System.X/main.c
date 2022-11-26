@@ -13,7 +13,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Timer/timer_software.h"
-#include "Button/button.h"
 
 /* USER CODE END Includes */
 
@@ -52,7 +51,7 @@ void main(void)
   /* Infinite loop */
   while(1)
   {
-      if(is_Button_Pressed(GPIO_PIN_1) == 1)
+      if(PIC_GPIO_ReadPin(GPIO_PIN_2) == 1)
         PORTB = 0xff;
       else
         PORTB = 0x00;
@@ -86,6 +85,5 @@ void TIM3_CALLBACK(void)
 {
   timer_Run();
   PIC_SCAN_BUTTON();
-  getKeyInput();
 }
 /*****************************END OF FILE**************************************/
