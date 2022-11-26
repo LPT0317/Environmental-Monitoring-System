@@ -21,7 +21,8 @@ void PIC_SCAN_BUTTON(void)
   int j = 0;
   for(i = 0; i < MAX_ROW; i++)
   {
-    PORTC = ~scan_output[i];
+    PORTC = PORTC | 0x30;
+    PORTC = PORTC & ~scan_output[i];
     PORTC = PORTC | 0x0f;
     for(j = 0; j < MAX_COL; j++)
     {

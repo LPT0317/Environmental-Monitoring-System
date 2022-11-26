@@ -25,6 +25,7 @@
         <itemPath>Drivers/p18f4620_tim.c</itemPath>
         <itemPath>Drivers/p18f4620_interrupt.c</itemPath>
         <itemPath>Drivers/p18f4620_gpio.c</itemPath>
+        <itemPath>Drivers/p18f4620_lcd.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Timer" projectFiles="true">
         <itemPath>Timer/timer_software.c</itemPath>
