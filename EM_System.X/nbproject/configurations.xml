@@ -10,8 +10,8 @@
         <itemPath>Drivers/p18f4620_gpio.h</itemPath>
         <itemPath>Drivers/p18f4620_lcd.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="f2" displayName="Timer" projectFiles="true">
-        <itemPath>Timer/timer_software.h</itemPath>
+      <logicalFolder name="f2" displayName="Software" projectFiles="true">
+        <itemPath>Software/timer_software.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -28,8 +28,8 @@
         <itemPath>Drivers/p18f4620_gpio.c</itemPath>
         <itemPath>Drivers/p18f4620_lcd.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="f2" displayName="Timer" projectFiles="true">
-        <itemPath>Timer/timer_software.c</itemPath>
+      <logicalFolder name="f2" displayName="Software" projectFiles="true">
+        <itemPath>Software/timer_software.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
@@ -41,6 +41,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>Drivers</Elem>
+    <Elem>Software</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

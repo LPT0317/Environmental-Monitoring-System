@@ -14,6 +14,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>Drivers</sourceRootElem>
+                <sourceRootElem>Software</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
