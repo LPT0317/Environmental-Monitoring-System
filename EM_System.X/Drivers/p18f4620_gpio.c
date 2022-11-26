@@ -4,8 +4,8 @@
 #include "p18f4620_gpio.h"
 
 /* Variables -----------------------------------------------------------------*/
-unsigned char scan_output[MAX_ROW] = {0x10,0x20};
-unsigned char scan_input[MAX_COL] = {0x01,0x02,0x04,0x08};
+unsigned char scan_output[MAX_ROW] = {0x10, 0x20};
+unsigned char scan_input[MAX_COL] = {0x01, 0x02, 0x04, 0x08};
 
 unsigned int button_res[NO_BUTTON] = {0};
 
@@ -40,5 +40,10 @@ int PIC_GPIO_ReadPin(int button)
 {
   if(button < 0 || button >= NO_BUTTON)
     return 0;
-  return button_res[button];
+  if(button_res[button] == 1)
+  {
+    button_res[button] = 0;
+    return 1;    
+  }
+  return 0;
 }

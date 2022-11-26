@@ -51,10 +51,8 @@ void main(void)
   /* Infinite loop */
   while(1)
   {
-      if(PIC_GPIO_ReadPin(GPIO_PIN_2) == 1)
-        PORTB = 0xff;
-      else
-        PORTB = 0x00;
+    if(PIC_GPIO_ReadPin(GPIO_PIN_2) == 1)
+      PORTB = 0xff;
   }
 }
 

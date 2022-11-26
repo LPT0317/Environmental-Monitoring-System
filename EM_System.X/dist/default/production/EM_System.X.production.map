@@ -1,5 +1,5 @@
 MPLINK 4.48, Linker
-Linker Map File - Created Sat Nov 26 10:56:08 2022
+Linker Map File - Created Sat Nov 26 11:04:19 2022
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -12,7 +12,6 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
 .idata_timer_software.o_i    romdata   0x00000e    program   0x000004
 .romdata_timer_software.o    romdata   0x00000e    program   0x000000
  .romdata_p18f4620_gpio.o    romdata   0x00000e    program   0x000000
-        .romdata_button.o    romdata   0x00000e    program   0x000000
       .romdata_fxd1616u.o    romdata   0x00000e    program   0x000000
           .romdata_main.o    romdata   0x00000e    program   0x000000
       .romdata_fxd2424u.o    romdata   0x00000e    program   0x000000
@@ -26,22 +25,20 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
             .code_c018i.o       code   0x000012    program   0x000000
           .idata_main.o_i    romdata   0x000012    program   0x000000
        InterruptVectorLow       code   0x000018    program   0x000006
-                   .cinit    romdata   0x00001e    program   0x000032
-     .code_p18f4620_tim.o       code   0x000050    program   0x000402
-           .code_button.o       code   0x000452    program   0x000384
-   .code_timer_software.o       code   0x0007d6    program   0x000230
-.code_p18f4620_interrupt.o       code   0x000a06    program   0x0001bc
-    .code_p18f4620_gpio.o       code   0x000bc2    program   0x00018c
-               _cinit_scn       code   0x000d4e    program   0x00009e
-                     PROG       code   0x000dec    program   0x000096
-             .code_main.o       code   0x000e82    program   0x00004c
-         .code_fxd2424u.o       code   0x000ece    program   0x00003a
-         .code_fxd1616u.o       code   0x000f08    program   0x00002c
-                    .code       code   0x000f34    program   0x000020
-             _startup_scn       code   0x000f54    program   0x00001c
-  .idata_p18f4620_tim.o_i    romdata   0x000f70    program   0x00000c
- .idata_p18f4620_gpio.o_i    romdata   0x000f7c    program   0x000016
-        .idata_button.o_i    romdata   0x000f92    program   0x000070
+                   .cinit    romdata   0x00001e    program   0x000026
+     .code_p18f4620_tim.o       code   0x000044    program   0x000402
+   .code_timer_software.o       code   0x000446    program   0x000230
+.code_p18f4620_interrupt.o       code   0x000676    program   0x0001bc
+    .code_p18f4620_gpio.o       code   0x000832    program   0x0001ac
+               _cinit_scn       code   0x0009de    program   0x00009e
+                     PROG       code   0x000a7c    program   0x000096
+             .code_main.o       code   0x000b12    program   0x000048
+         .code_fxd2424u.o       code   0x000b5a    program   0x00003a
+         .code_fxd1616u.o       code   0x000b94    program   0x00002c
+                    .code       code   0x000bc0    program   0x000020
+             _startup_scn       code   0x000be0    program   0x00001c
+  .idata_p18f4620_tim.o_i    romdata   0x000bfc    program   0x00000c
+ .idata_p18f4620_gpio.o_i    romdata   0x000c08    program   0x000016
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
@@ -55,27 +52,25 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
     .config_30000d_main.o    romdata   0x30000d    program   0x000001
                 MATH_DATA      udata   0x000000       data   0x000014
                  .tmpdata      udata   0x000014       data   0x000009
-          .idata_button.o      idata   0x000080       data   0x000070
-    .idata_p18f4620_tim.o      idata   0x0000f0       data   0x00000c
-  .idata_timer_software.o      idata   0x0000fc       data   0x000004
+   .idata_p18f4620_gpio.o      idata   0x000080       data   0x000016
+    .idata_p18f4620_tim.o      idata   0x000096       data   0x00000c
+           .udata_c018i.o      udata   0x0000a2       data   0x00000a
+  .idata_timer_software.o      idata   0x0000ac       data   0x000004
+    .udata_p18f4620_tim.o      udata   0x0000b0       data   0x000000
+            .idata_main.o      idata   0x0000b0       data   0x000000
+.udata_p18f4620_interrupt.o      udata   0x0000b0       data   0x000000
+.idata_p18f4620_interrupt.o      idata   0x0000b0       data   0x000000
+  .udata_timer_software.o      udata   0x0000b0       data   0x000000
+            .udata_main.o      udata   0x0000b0       data   0x000000
+   .udata_p18f4620_gpio.o      udata   0x0000b0       data   0x000000
+           .idata_c018i.o      idata   0x0000b0       data   0x000000
+        .udata_fxd1616u.o      udata   0x0000b0       data   0x000000
+        .idata_fxd1616u.o      idata   0x0000b0       data   0x000000
+        .udata_fxd2424u.o      udata   0x0000b0       data   0x000000
+        .idata_fxd2424u.o      idata   0x0000b0       data   0x000000
+          .udata___init.o      udata   0x0000b0       data   0x000000
+          .idata___init.o      idata   0x0000b0       data   0x000000
                    .stack      udata   0x000e00       data   0x000100
-   .idata_p18f4620_gpio.o      idata   0x000f00       data   0x000016
-           .udata_c018i.o      udata   0x000f16       data   0x00000a
-          .idata___init.o      idata   0x000f20       data   0x000000
-          .udata___init.o      udata   0x000f20       data   0x000000
-        .idata_fxd2424u.o      idata   0x000f20       data   0x000000
-        .udata_fxd2424u.o      udata   0x000f20       data   0x000000
-        .idata_fxd1616u.o      idata   0x000f20       data   0x000000
-        .udata_fxd1616u.o      udata   0x000f20       data   0x000000
-           .idata_c018i.o      idata   0x000f20       data   0x000000
-          .udata_button.o      udata   0x000f20       data   0x000000
-   .udata_p18f4620_gpio.o      udata   0x000f20       data   0x000000
-            .udata_main.o      udata   0x000f20       data   0x000000
-  .udata_timer_software.o      udata   0x000f20       data   0x000000
-.idata_p18f4620_interrupt.o      idata   0x000f20       data   0x000000
-.udata_p18f4620_interrupt.o      udata   0x000f20       data   0x000000
-            .idata_main.o      idata   0x000f20       data   0x000000
-    .udata_p18f4620_tim.o      udata   0x000f20       data   0x000000
             SFR_UNBANKED0      udata   0x000f80       data   0x000080
 
 
@@ -84,55 +79,55 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                                Start         End      
                            ---------   ---------      
                             0x000000    0x000011      
-                            0x000018    0x001001      
+                            0x000018    0x000c1d      
                             0x300001    0x300003      
                             0x300005    0x300006      
                             0x300008    0x30000d      
-            4103 out of 66584 program addresses used, program memory utilization is 6%
+            3107 out of 66584 program addresses used, program memory utilization is 4%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D2424S   0x000e16    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                D2424SNEG   0x000e24    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 D2424SOK   0x000e20    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  D2424SX   0x000e3c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  DA2424S   0x000e02    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 FXD1616U   0x000f08    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                 FXD2424S   0x000dec    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 FXD2424U   0x000ece    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
-                 FXM1616U   0x000e46    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616u.asm
+                   D2424S   0x000aa6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                D2424SNEG   0x000ab4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 D2424SOK   0x000ab0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  D2424SX   0x000acc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  DA2424S   0x000a92    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 FXD1616U   0x000b94    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXD2424S   0x000a7c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 FXD2424U   0x000b5a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                 FXM1616U   0x000ad6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616u.asm
       InterruptVectorHigh   0x000008    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
        InterruptVectorLow   0x000018    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-             MX_GPIO_INIT   0x000eb2    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-             MX_TIM3_INIT   0x000eb6    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-          PIC_BUTTON_INIT   0x000bc2    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-             PIC_EXT_INIT   0x000a0e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-         PIC_GPIO_ReadPin   0x000ce6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-             PIC_HIGH_ISR   0x000af6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-       PIC_INTERRUPT_INIT   0x000a06    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-              PIC_LOW_ISR   0x000a16    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-          PIC_SCAN_BUTTON   0x000bcc    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-            PIC_TIM0_INIT   0x000050    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-           PIC_TIM0_START   0x000112    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM0_STOP   0x00019e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM1_INIT   0x0001a4    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-           PIC_TIM1_START   0x00026c    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM1_STOP   0x0002f8    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM3_INIT   0x0002fe    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-           PIC_TIM3_START   0x0003c2    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM3_STOP   0x00044e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            TIM0_CALLBACK   0x0001a2    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            TIM1_CALLBACK   0x0002fc    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            TIM3_CALLBACK   0x000ec6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-       ___return_lbl00000   0x000f06    program     static                          
-       ___return_lbl00000   0x000f32    program     static                          
+             MX_GPIO_INIT   0x000b3e    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+             MX_TIM3_INIT   0x000b42    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+          PIC_BUTTON_INIT   0x000832    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+             PIC_EXT_INIT   0x00067e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
+         PIC_GPIO_ReadPin   0x000956    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+             PIC_HIGH_ISR   0x000766    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
+       PIC_INTERRUPT_INIT   0x000676    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
+              PIC_LOW_ISR   0x000686    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
+          PIC_SCAN_BUTTON   0x00083c    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+            PIC_TIM0_INIT   0x000044    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+           PIC_TIM0_START   0x000106    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM0_STOP   0x000192    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM1_INIT   0x000198    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+           PIC_TIM1_START   0x000260    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM1_STOP   0x0002ec    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM3_INIT   0x0002f2    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+           PIC_TIM3_START   0x0003b6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM3_STOP   0x000442    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            TIM0_CALLBACK   0x000196    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            TIM1_CALLBACK   0x0002f0    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            TIM3_CALLBACK   0x000b52    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+       ___return_lbl00000   0x000b92    program     static                          
+       ___return_lbl00000   0x000bbe    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x000f6e    program     static                          
+       ___return_lbl00001   0x000bfa    program     static                          
        ___return_lbl00002   0x00001c    program     static                          
-       ___return_lbl00002   0x000dea    program     static                          
+       ___return_lbl00002   0x000a7a    program     static                          
        ___return_lbl00003   0x00000c    program     static                          
                __config_0   0x300001    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
                __config_1   0x300002    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
@@ -146,30 +141,28 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                __config_8   0x30000b    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
                __config_9   0x30000c    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
                    __init   0x000006    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x000f34    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                _do_cinit   0x000d4e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+            __zero_memory   0x000bc0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                _do_cinit   0x0009de    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                   _false   0x000f02    program     static                          
-                 _startup   0x000f54    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x000f4a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                copy_loop   0x000dc0    program     static                          
-            copy_one_byte   0x000dc6    program     static                          
-                     done   0x000dea    program     static                          
-             done_copying   0x000dd4    program     static                          
-                  endloop   0x000f2e    program     static                          
-              getKeyInput   0x000452    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-        is_Button_Pressed   0x00073e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-             is_Timer_Out   0x00096e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-                     loop   0x000f12    program     static                          
-                     loop   0x000f64    program     static                          
-                     loop   0x000eda    program     static                          
-                   loop_h   0x000f42    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_l   0x000f4c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     main   0x000e82    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-                set_Timer   0x0008b6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-                     test   0x000d68    program     static                          
-                timer_Run   0x0007d6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-               zero_block   0x000f42    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   _false   0x000b8e    program     static                          
+                 _startup   0x000be0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x000bd6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                copy_loop   0x000a50    program     static                          
+            copy_one_byte   0x000a56    program     static                          
+                     done   0x000a7a    program     static                          
+             done_copying   0x000a64    program     static                          
+                  endloop   0x000bba    program     static                          
+             is_Timer_Out   0x0005de    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+                     loop   0x000b9e    program     static                          
+                     loop   0x000bf0    program     static                          
+                     loop   0x000b66    program     static                          
+                   loop_h   0x000bce    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_l   0x000bd8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     main   0x000b12    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+                set_Timer   0x000526    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+                     test   0x0009f8    program     static                          
+                timer_Run   0x000446    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+               zero_block   0x000bce    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -184,7 +177,6 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                   BAUDCTL   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               BAUDCTLbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                       BSR   0x000fe0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   BUTTON   0x000080       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
                   CCP1CON   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               CCP1CONbits   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   CCP2CON   0x000fba       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -241,10 +233,6 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                  IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      IPR2   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  IPR2bits   0x000fa2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  KeyReg0   0x000090       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                  KeyReg1   0x0000a0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                  KeyReg2   0x0000b0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                  KeyReg3   0x0000c0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
                      LATA   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATAbits   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATB   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -265,9 +253,9 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                       PCL   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    PCLATH   0x000ffa       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    PCLATU   0x000ffb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 PIC_TIM0   0x0000f0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                 PIC_TIM1   0x0000f2       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                 PIC_TIM3   0x0000f4       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                 PIC_TIM0   0x000096       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                 PIC_TIM1   0x000098       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                 PIC_TIM3   0x00009a       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
                      PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIE1bits   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIE2   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -337,9 +325,9 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                   TBLPTRH   0x000ff7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   TBLPTRL   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   TBLPTRU   0x000ff8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     TIM0   0x0000f6       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                     TIM1   0x0000f8       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                     TIM3   0x0000fa       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                     TIM0   0x00009c       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                     TIM1   0x00009e       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                     TIM3   0x0000a0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
                     TMR0H   0x000fd7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR0L   0x000fd6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR1H   0x000fcf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -364,7 +352,6 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                     TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-       TimeOutForKeyPress   0x0000d0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
                         W   0x000fe8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    WDTCON   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                WDTCONbits   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -394,21 +381,19 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                  __TEMPB1   0x000012       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                  __TEMPB2   0x000011       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                  __TEMPB3   0x000010       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                  __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-                  __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                  __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
                   __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-                  __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-              button_flag   0x0000e0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-               button_res   0x000f06       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-                  counter   0x0000fe       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-                curr_byte   0x000f19       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x000f1b       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x000f1d       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     flag   0x0000fc       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-                     prom   0x000f16       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               scan_input   0x000f02       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-              scan_output   0x000f00       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+                  __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+                  __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                  __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+               button_res   0x000086       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+                  counter   0x0000ae       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+                curr_byte   0x0000a5       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x0000a7       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x0000a9       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     flag   0x0000ac       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+                     prom   0x0000a2       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               scan_input   0x000082       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+              scan_output   0x000080       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
 
 
 
@@ -422,63 +407,61 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
        ___return_lbl00003   0x00000c    program     static                          
        InterruptVectorLow   0x000018    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
        ___return_lbl00002   0x00001c    program     static                          
-            PIC_TIM0_INIT   0x000050    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-           PIC_TIM0_START   0x000112    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM0_STOP   0x00019e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            TIM0_CALLBACK   0x0001a2    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM1_INIT   0x0001a4    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-           PIC_TIM1_START   0x00026c    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM1_STOP   0x0002f8    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            TIM1_CALLBACK   0x0002fc    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM3_INIT   0x0002fe    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-           PIC_TIM3_START   0x0003c2    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-            PIC_TIM3_STOP   0x00044e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-              getKeyInput   0x000452    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-        is_Button_Pressed   0x00073e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                timer_Run   0x0007d6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-                set_Timer   0x0008b6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-             is_Timer_Out   0x00096e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-       PIC_INTERRUPT_INIT   0x000a06    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-             PIC_EXT_INIT   0x000a0e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-              PIC_LOW_ISR   0x000a16    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-             PIC_HIGH_ISR   0x000af6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
-          PIC_BUTTON_INIT   0x000bc2    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-          PIC_SCAN_BUTTON   0x000bcc    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-         PIC_GPIO_ReadPin   0x000ce6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-                _do_cinit   0x000d4e    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x000d68    program     static                          
-                copy_loop   0x000dc0    program     static                          
-            copy_one_byte   0x000dc6    program     static                          
-             done_copying   0x000dd4    program     static                          
-                     done   0x000dea    program     static                          
-       ___return_lbl00002   0x000dea    program     static                          
-                 FXD2424S   0x000dec    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  DA2424S   0x000e02    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                   D2424S   0x000e16    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 D2424SOK   0x000e20    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                D2424SNEG   0x000e24    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                  D2424SX   0x000e3c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
-                 FXM1616U   0x000e46    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616u.asm
-                     main   0x000e82    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-             MX_GPIO_INIT   0x000eb2    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-             MX_TIM3_INIT   0x000eb6    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-            TIM3_CALLBACK   0x000ec6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-                 FXD2424U   0x000ece    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
-                     loop   0x000eda    program     static                          
-                   _false   0x000f02    program     static                          
-       ___return_lbl00000   0x000f06    program     static                          
-                 FXD1616U   0x000f08    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x000f12    program     static                          
-                  endloop   0x000f2e    program     static                          
-       ___return_lbl00000   0x000f32    program     static                          
-            __zero_memory   0x000f34    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_h   0x000f42    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-               zero_block   0x000f42    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                compare_l   0x000f4a    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   loop_l   0x000f4c    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 _startup   0x000f54    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x000f64    program     static                          
-       ___return_lbl00001   0x000f6e    program     static                          
+            PIC_TIM0_INIT   0x000044    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+           PIC_TIM0_START   0x000106    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM0_STOP   0x000192    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            TIM0_CALLBACK   0x000196    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM1_INIT   0x000198    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+           PIC_TIM1_START   0x000260    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM1_STOP   0x0002ec    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            TIM1_CALLBACK   0x0002f0    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM3_INIT   0x0002f2    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+           PIC_TIM3_START   0x0003b6    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+            PIC_TIM3_STOP   0x000442    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                timer_Run   0x000446    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+                set_Timer   0x000526    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+             is_Timer_Out   0x0005de    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+       PIC_INTERRUPT_INIT   0x000676    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
+             PIC_EXT_INIT   0x00067e    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
+              PIC_LOW_ISR   0x000686    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
+             PIC_HIGH_ISR   0x000766    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_interrupt.c
+          PIC_BUTTON_INIT   0x000832    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+          PIC_SCAN_BUTTON   0x00083c    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+         PIC_GPIO_ReadPin   0x000956    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+                _do_cinit   0x0009de    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x0009f8    program     static                          
+                copy_loop   0x000a50    program     static                          
+            copy_one_byte   0x000a56    program     static                          
+             done_copying   0x000a64    program     static                          
+                     done   0x000a7a    program     static                          
+       ___return_lbl00002   0x000a7a    program     static                          
+                 FXD2424S   0x000a7c    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  DA2424S   0x000a92    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                   D2424S   0x000aa6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 D2424SOK   0x000ab0    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                D2424SNEG   0x000ab4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                  D2424SX   0x000acc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424s.asm
+                 FXM1616U   0x000ad6    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616u.asm
+                     main   0x000b12    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+             MX_GPIO_INIT   0x000b3e    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+             MX_TIM3_INIT   0x000b42    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+            TIM3_CALLBACK   0x000b52    program     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
+                 FXD2424U   0x000b5a    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd2424u.c
+                     loop   0x000b66    program     static                          
+                   _false   0x000b8e    program     static                          
+       ___return_lbl00000   0x000b92    program     static                          
+                 FXD1616U   0x000b94    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x000b9e    program     static                          
+                  endloop   0x000bba    program     static                          
+       ___return_lbl00000   0x000bbe    program     static                          
+            __zero_memory   0x000bc0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_h   0x000bce    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+               zero_block   0x000bce    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                compare_l   0x000bd6    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   loop_l   0x000bd8    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 _startup   0x000be0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x000bf0    program     static                          
+       ___return_lbl00001   0x000bfa    program     static                          
                __config_0   0x300001    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
                __config_1   0x300002    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
                __config_2   0x300003    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
@@ -491,14 +474,14 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                __config_9   0x30000c    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
               __config_10   0x30000d    program     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
                      SIGN   0x000000       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-            __FPFLAGSbits   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                  __REMB3   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+            __FPFLAGSbits   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                  __AARGB7   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB2   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000002       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB6   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB1   0x000004       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000003       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB5   0x000004       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000004       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                   __REMB0   0x000005       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB4   0x000005       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
                  __AARGB3   0x000006       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
@@ -516,81 +499,73 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                  __TEMPB1   0x000012       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                    __TEMP   0x000013       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                  __TEMPB0   0x000013       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                  __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
                   __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
                   __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
                   __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
                   __tmp_0   0x000014       data     static D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\main.c
-                   BUTTON   0x000080       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                  KeyReg0   0x000090       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                  KeyReg1   0x0000a0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                  KeyReg2   0x0000b0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                  KeyReg3   0x0000c0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-       TimeOutForKeyPress   0x0000d0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-              button_flag   0x0000e0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Button\button.c
-                 PIC_TIM0   0x0000f0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                 PIC_TIM1   0x0000f2       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                 PIC_TIM3   0x0000f4       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                     TIM0   0x0000f6       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                     TIM1   0x0000f8       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                     TIM3   0x0000fa       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
-                     flag   0x0000fc       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-                  counter   0x0000fe       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
-              scan_output   0x000f00       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-               scan_input   0x000f02       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-               button_res   0x000f06       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
-                     prom   0x000f16       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                curr_byte   0x000f19       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-               curr_entry   0x000f1b       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 data_ptr   0x000f1d       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                PORTAbits   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+              scan_output   0x000080       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+               scan_input   0x000082       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+               button_res   0x000086       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_gpio.c
+                 PIC_TIM0   0x000096       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                 PIC_TIM1   0x000098       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                 PIC_TIM3   0x00009a       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                     TIM0   0x00009c       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                     TIM1   0x00009e       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                     TIM3   0x0000a0       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Drivers\p18f4620_tim.c
+                     prom   0x0000a2       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                curr_byte   0x0000a5       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+               curr_entry   0x0000a7       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                 data_ptr   0x0000a9       data     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     flag   0x0000ac       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
+                  counter   0x0000ae       data     extern D:\PIC18\Project\Environmental-Monitoring-System\EM_System.X\Timer\timer_software.c
                     PORTA   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                PORTAbits   0x000f80       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTBbits   0x000f81       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PORTB   0x000f81       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                PORTCbits   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PORTC   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                PORTCbits   0x000f82       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PORTD   0x000f83       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTDbits   0x000f83       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    PORTE   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 PORTEbits   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 LATAbits   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    PORTE   0x000f84       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATA   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     LATB   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 LATAbits   0x000f89       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATBbits   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     LATC   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     LATB   0x000f8a       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATCbits   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     LATC   0x000f8b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATDbits   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATD   0x000f8c       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  LATEbits   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      LATE   0x000f8d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                TRISAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TRISA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDRAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TRISB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                TRISBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TRISA   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                TRISAbits   0x000f92       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDRBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TRISB   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                TRISBbits   0x000f93       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TRISC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDRCbits   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      DDRC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TRISC   0x000f94       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     DDRD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TRISD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDRDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TRISDbits   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TRISD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                TRISEbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    TRISE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     DDRE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     DDRD   0x000f95       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  DDREbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     DDRE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    TRISE   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                TRISEbits   0x000f96       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               OSCTUNEbits   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   OSCTUNE   0x000f9b       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                     PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIE1bits   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                     PIE1   0x000f9d       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIR1   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIR1bits   0x000f9e       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                 IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      IPR1   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                 IPR1bits   0x000f9f       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIE2   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  PIE2bits   0x000fa0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PIR2   0x000fa1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -603,8 +578,8 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                    EEDATA   0x000fa8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     EEADR   0x000fa9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    EEADRH   0x000faa       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 RCSTAbits   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    RCSTA   0x000fab       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TXSTA   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 TXSTAbits   0x000fac       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TXREG   0x000fad       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -615,14 +590,14 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                     T3CON   0x000fb1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR3L   0x000fb2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR3H   0x000fb3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                CMCONbits   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     CMCON   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                CMCONbits   0x000fb4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                CVRCONbits   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CVRCON   0x000fb5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-              ECCP1ASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   ECCP1AS   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-              PWM1CONbits   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+              ECCP1ASbits   0x000fb6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   PWM1CON   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+              PWM1CONbits   0x000fb7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   BAUDCON   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               BAUDCONbits   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   BAUDCTL   0x000fb8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -632,10 +607,10 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                     CCPR2   0x000fbb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CCPR2L   0x000fbb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CCPR2H   0x000fbc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  CCP1CON   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               CCP1CONbits   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   CCPR1L   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  CCP1CON   0x000fbd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     CCPR1   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   CCPR1L   0x000fbe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    CCPR1H   0x000fbf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                ADCON2bits   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    ADCON2   0x000fc0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -650,8 +625,8 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
               SSPCON2bits   0x000fc5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   SSPCON1   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
               SSPCON1bits   0x000fc6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-              SSPSTATbits   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   SSPSTAT   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+              SSPSTATbits   0x000fc7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    SSPADD   0x000fc8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    SSPBUF   0x000fc9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     T2CON   0x000fca       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -664,16 +639,16 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                     TMR1H   0x000fcf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      RCON   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                  RCONbits   0x000fd0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   WDTCON   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                WDTCONbits   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                  HLVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-              HLVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   LVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   WDTCON   0x000fd1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                LVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   OSCCON   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   LVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+              HLVDCONbits   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                  HLVDCON   0x000fd2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                OSCCONbits   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    T0CON   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   OSCCON   0x000fd3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                 T0CONbits   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    T0CON   0x000fd5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR0L   0x000fd6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     TMR0H   0x000fd7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                STATUSbits   0x000fd8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -687,8 +662,8 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                  POSTINC2   0x000fde       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     INDF2   0x000fdf       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                       BSR   0x000fe0       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    FSR1L   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      FSR1   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    FSR1L   0x000fe1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     FSR1H   0x000fe2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    PLUSW1   0x000fe3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   PREINC1   0x000fe4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
@@ -711,20 +686,20 @@ Linker Map File - Created Sat Nov 26 10:56:08 2022
                   INTCON2   0x000ff1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                INTCONbits   0x000ff2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    INTCON   0x000ff2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                    PRODL   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      PROD   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                    PRODL   0x000ff3       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                     PRODH   0x000ff4       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    TABLAT   0x000ff5       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                   TBLPTR   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   TBLPTRL   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                   TBLPTR   0x000ff6       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   TBLPTRH   0x000ff7       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                   TBLPTRU   0x000ff8       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-                       PC   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                       PCL   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+                       PC   0x000ff9       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    PCLATH   0x000ffa       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    PCLATU   0x000ffb       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
-               STKPTRbits   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                    STKPTR   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
+               STKPTRbits   0x000ffc       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                       TOS   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      TOSL   0x000ffd       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
                      TOSH   0x000ffe       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4620.asm
