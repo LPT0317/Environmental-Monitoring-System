@@ -26,7 +26,7 @@ extern "C"
 #define GPIO_PIN_6 6
 #define GPIO_PIN_B 7
 
-#define MAX_ROW 2
+#define MAX_ROW 4
 #define MAX_COL 4
   
 #define NO_BUTTON 8
