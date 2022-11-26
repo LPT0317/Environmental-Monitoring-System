@@ -17,6 +17,8 @@
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
+int i = 0;
+unsigned char mask[4] = {0x10, 0x20, 0x40, 0x80};
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_TIM3_INIT(void);
@@ -46,13 +48,16 @@ void main(void)
   MX_GPIO_INIT();
   
   /* USER CODE BEGIN 2 */
-  PORTB= 0x00;
+  PORTB = 0x00;
   /* USER CODE END 2 */
   /* Infinite loop */
   while(1)
   {
-    if(PIC_GPIO_ReadPin(GPIO_PIN_2) == 1)
-      PORTB = 0xff;
+    for(i = 0; i < 8; i++)
+    {
+      if(PIC_GPIO_ReadPin(i) == 1)
+        PORTB = i;
+    }
   }
 }
 
