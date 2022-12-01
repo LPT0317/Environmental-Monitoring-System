@@ -10,10 +10,14 @@
 #include "Drivers/p18f4620_interrupt.h"
 #include "Drivers/p18f4620_gpio.h"
 #include "Drivers/p18f4620_lcd.h"
+#include "Drivers/p18f4620_uart.h"
+#include "Drivers/p18f4620_adc.h"
+#include "Drivers/p18f4620_pwm.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Software/timer_software.h"
+#include "Software/menu.h"
 
 /* USER CODE END Includes */
 
@@ -47,13 +51,12 @@ void main(void)
   MX_GPIO_INIT();
   
   /* USER CODE BEGIN 2 */
-  LCD_Print_String_x_y(1, 0, "Hello");
-  LCD_Print_String_x_y(2, 0, "Vo Duc Minh");
+  
   /* USER CODE END 2 */
   /* Infinite loop */
   while(1)
   {
-      
+    fsm_menu();
   }
 }
 
@@ -66,6 +69,9 @@ static void MX_GPIO_INIT(void)
 {
   PIC_BUTTON_INIT();
   LCD_INIT();
+  PIC_UART_INIT();
+  PIC_ADC_INIT();
+  //PIC_PWM_INIT();
 }
 
 /**

@@ -9,9 +9,14 @@
         <itemPath>Drivers/p18f4620_interrupt.h</itemPath>
         <itemPath>Drivers/p18f4620_gpio.h</itemPath>
         <itemPath>Drivers/p18f4620_lcd.h</itemPath>
+        <itemPath>Drivers/p18f4620_uart.h</itemPath>
+        <itemPath>Drivers/p18f4620_adc.h</itemPath>
+        <itemPath>Drivers/p18f4620_pwm.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Software" projectFiles="true">
         <itemPath>Software/timer_software.h</itemPath>
+        <itemPath>Software/menu.h</itemPath>
+        <itemPath>Software/sensor.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -27,9 +32,14 @@
         <itemPath>Drivers/p18f4620_interrupt.c</itemPath>
         <itemPath>Drivers/p18f4620_gpio.c</itemPath>
         <itemPath>Drivers/p18f4620_lcd.c</itemPath>
+        <itemPath>Drivers/p18f4620_uart.c</itemPath>
+        <itemPath>Drivers/p18f4620_adc.c</itemPath>
+        <itemPath>Drivers/p18f4620_pwm.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Software" projectFiles="true">
         <itemPath>Software/timer_software.c</itemPath>
+        <itemPath>Software/menu.c</itemPath>
+        <itemPath>Software/sensor.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

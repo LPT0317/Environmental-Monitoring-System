@@ -16,6 +16,7 @@ extern "C"
 /* Includes ------------------------------------------------------------------*/
 #include <p18f4620.h>
 #include "p18f4620_tim.h"
+#include "p18f4620_uart.h"
 
 /* Function prototypes -------------------------------------------------------*/
 void PIC_INTERRUPT_INIT(void);

@@ -68,6 +68,13 @@ void PIC_LOW_ISR(void)
     INTCONbits.INT0IF = 0;
     //add code here
   }
+  
+  // UART Interrupt Receive
+  if(PIR1bits.RCIF == 1)
+  {
+    PIR1bits.RCIF = 0;
+    PIC_UART_ISR();
+  }
 }
 
 #pragma code
@@ -107,5 +114,12 @@ void PIC_HIGH_ISR(void)
   {
     INTCONbits.INT0IF = 0;
     //add code here
+  }
+  
+  // UART Interrupt Receive
+  if(PIR1bits.RCIF == 1)
+  {
+    PIR1bits.RCIF = 0;
+    PIC_UART_ISR();
   }
 }
