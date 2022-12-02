@@ -2,15 +2,18 @@
 #include "sensor.h"
 
 /* Variables -----------------------------------------------------------------*/
-float Sensor[7] = {0.0};
-int raw_value[7] = {0};
-unsigned char SENSOR_CHANNEL[7] = {0, 1, 2, 3, 0, 1, 2};
+float Sensor[7];
 
-/* Function ------------------------------------------------------------------*/
-void calc_Sensor(void)
-{
-  
-}
+float adc_min = 0;
+float adc_max = 1023;
+
+/*
+ * pH Sensor
+ */
+float pH_max = 12;
+float pH_min = 0;
+float pH_value = 0;
+int pH_raw = 0;
 
 /* Function prototypes -------------------------------------------------------*/
 float Sensor_Get_Value(unsigned int sensor_name)
@@ -19,11 +22,9 @@ float Sensor_Get_Value(unsigned int sensor_name)
     return 0.0;
   return Sensor[sensor_name];
 }
-void Analog_Raw_Value(void)
+void Sensor_Calc_pH(void)
 {
-  int i = 0;
-  for(i = 0; i < 7; i++)
-  {
-    raw_value[i] = PIC_GET_ADC(SENSOR_CHANNEL[i]);
-  }
+  pH_raw = PIC_GET_ADC(0);
+  pH_value = (float)(pH_raw);
+  Sensor[pH_Sensor] = pH_min + (pH_value - adc_min) * (pH_max - pH_min) / (adc_max - adc_min);
 }

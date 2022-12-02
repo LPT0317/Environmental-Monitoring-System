@@ -19,6 +19,8 @@ const rom unsigned char *menu[] = {"SENSOR VALUE",
 unsigned int value_index[] = {4, 4, 5, 6, 5, 5, 6};
 unsigned int curr_index = 1;
 unsigned int menu_status = INIT;
+unsigned int SensorName[7] = {pH_Sensor, SS_Sensor, COD_Sensor, TEMP_Sensor,
+                               NH4_Sensor, NO3_Sensor, FLOW_Sensor};
 
 /* Function prototypes -------------------------------------------------------*/
 void scroll_Up(void)
@@ -31,11 +33,17 @@ void scroll_Down(void)
 }
 void Display_menu(void)
 {
+  float value_1 = 0;
+  float value_2 = 0;
+  if(curr_index != 1)
+    value_1 = Sensor_Get_Value(SensorName[0]);
+  value_2 = Sensor_Get_Value(SensorName[0]);
   LCD_Clear_Buffer_All();
   LCD_Print_String(0, 0, menu[curr_index - 1]);
   LCD_Print_String(1, 0, menu[curr_index]);
-  if(curr_index != 1) LCD_Print_Float(0, value_index[curr_index - 2], 5.5);
-  LCD_Print_Float(1, value_index[curr_index - 1], 5.5);
+  if(curr_index != 1) 
+    LCD_Print_Float(0, value_index[curr_index - 2], value_1);
+  LCD_Print_Float(1, value_index[curr_index - 1], value_2);
   LCD_Dislay();
 }
 void fsm_menu(void)

@@ -27,7 +27,7 @@ extern "C"
   
 /* Function prototypes -------------------------------------------------------*/
 float Sensor_Get_Value(unsigned int sensor_name);
-void Analog_Raw_Value(void);
+void Sensor_Calc_pH(void);
 
 #ifdef	__cplusplus
 }

@@ -18,6 +18,7 @@
 /* USER CODE BEGIN Includes */
 #include "Software/timer_software.h"
 #include "Software/menu.h"
+#include "Software/sensor.h"
 
 /* USER CODE END Includes */
 
@@ -91,5 +92,6 @@ void TIM3_CALLBACK(void)
 {
   timer_Run();
   PIC_SCAN_BUTTON();
+  Sensor_Calc_pH();
 }
 /*****************************END OF FILE**************************************/

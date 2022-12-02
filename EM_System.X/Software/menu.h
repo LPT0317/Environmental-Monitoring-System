@@ -16,6 +16,7 @@ extern "C"
 /* Includes ------------------------------------------------------------------*/
 #include "../Drivers/p18f4620_lcd.h"
 #include "../Drivers/p18f4620_gpio.h"
+#include "../Software/sensor.h"
   
 /* Function prototypes -------------------------------------------------------*/
 void fsm_menu(void);
