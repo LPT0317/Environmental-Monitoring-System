@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c Drivers/p18f4620_uart.c Software/timer_software.c main.c Drivers/p18f4620_adc.c Drivers/p18f4620_pwm.c Software/menu.c Software/sensor.c
+SOURCEFILES_QUOTED_IF_SPACED=Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c Drivers/p18f4620_uart.c Drivers/p18f4620_adc.c Drivers/p18f4620_pwm.c Software/timer_software.c Software/menu.c Software/sensor.c main.c Software/uart.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o ${OBJECTDIR}/Drivers/p18f4620_uart.o ${OBJECTDIR}/Software/timer_software.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_adc.o ${OBJECTDIR}/Drivers/p18f4620_pwm.o ${OBJECTDIR}/Software/menu.o ${OBJECTDIR}/Software/sensor.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d ${OBJECTDIR}/Drivers/p18f4620_lcd.o.d ${OBJECTDIR}/Drivers/p18f4620_uart.o.d ${OBJECTDIR}/Software/timer_software.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Drivers/p18f4620_adc.o.d ${OBJECTDIR}/Drivers/p18f4620_pwm.o.d ${OBJECTDIR}/Software/menu.o.d ${OBJECTDIR}/Software/sensor.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o ${OBJECTDIR}/Drivers/p18f4620_uart.o ${OBJECTDIR}/Drivers/p18f4620_adc.o ${OBJECTDIR}/Drivers/p18f4620_pwm.o ${OBJECTDIR}/Software/timer_software.o ${OBJECTDIR}/Software/menu.o ${OBJECTDIR}/Software/sensor.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Software/uart.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d ${OBJECTDIR}/Drivers/p18f4620_lcd.o.d ${OBJECTDIR}/Drivers/p18f4620_uart.o.d ${OBJECTDIR}/Drivers/p18f4620_adc.o.d ${OBJECTDIR}/Drivers/p18f4620_pwm.o.d ${OBJECTDIR}/Software/timer_software.o.d ${OBJECTDIR}/Software/menu.o.d ${OBJECTDIR}/Software/sensor.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Software/uart.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o ${OBJECTDIR}/Drivers/p18f4620_uart.o ${OBJECTDIR}/Software/timer_software.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_adc.o ${OBJECTDIR}/Drivers/p18f4620_pwm.o ${OBJECTDIR}/Software/menu.o ${OBJECTDIR}/Software/sensor.o
+OBJECTFILES=${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o ${OBJECTDIR}/Drivers/p18f4620_uart.o ${OBJECTDIR}/Drivers/p18f4620_adc.o ${OBJECTDIR}/Drivers/p18f4620_pwm.o ${OBJECTDIR}/Software/timer_software.o ${OBJECTDIR}/Software/menu.o ${OBJECTDIR}/Software/sensor.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Software/uart.o
 
 # Source Files
-SOURCEFILES=Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c Drivers/p18f4620_uart.c Software/timer_software.c main.c Drivers/p18f4620_adc.c Drivers/p18f4620_pwm.c Software/menu.c Software/sensor.c
+SOURCEFILES=Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c Drivers/p18f4620_uart.c Drivers/p18f4620_adc.c Drivers/p18f4620_pwm.c Software/timer_software.c Software/menu.c Software/sensor.c main.c Software/uart.c
 
 
 
@@ -142,22 +142,6 @@ ${OBJECTDIR}/Drivers/p18f4620_uart.o: Drivers/p18f4620_uart.c  nbproject/Makefil
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_uart.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/Software/timer_software.o: Software/timer_software.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/Software" 
-	@${RM} ${OBJECTDIR}/Software/timer_software.o.d 
-	@${RM} ${OBJECTDIR}/Software/timer_software.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/timer_software.o   Software/timer_software.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/Software/timer_software.o 
-	@${FIXDEPS} "${OBJECTDIR}/Software/timer_software.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
 ${OBJECTDIR}/Drivers/p18f4620_adc.o: Drivers/p18f4620_adc.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/Drivers" 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_adc.o.d 
@@ -174,6 +158,14 @@ ${OBJECTDIR}/Drivers/p18f4620_pwm.o: Drivers/p18f4620_pwm.c  nbproject/Makefile-
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_pwm.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/Software/timer_software.o: Software/timer_software.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Software" 
+	@${RM} ${OBJECTDIR}/Software/timer_software.o.d 
+	@${RM} ${OBJECTDIR}/Software/timer_software.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/timer_software.o   Software/timer_software.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Software/timer_software.o 
+	@${FIXDEPS} "${OBJECTDIR}/Software/timer_software.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 ${OBJECTDIR}/Software/menu.o: Software/menu.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/Software" 
 	@${RM} ${OBJECTDIR}/Software/menu.o.d 
@@ -189,6 +181,22 @@ ${OBJECTDIR}/Software/sensor.o: Software/sensor.c  nbproject/Makefile-${CND_CONF
 	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/sensor.o   Software/sensor.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Software/sensor.o 
 	@${FIXDEPS} "${OBJECTDIR}/Software/sensor.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Software/uart.o: Software/uart.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Software" 
+	@${RM} ${OBJECTDIR}/Software/uart.o.d 
+	@${RM} ${OBJECTDIR}/Software/uart.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/uart.o   Software/uart.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Software/uart.o 
+	@${FIXDEPS} "${OBJECTDIR}/Software/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
 ${OBJECTDIR}/Drivers/p18f4620_tim.o: Drivers/p18f4620_tim.c  nbproject/Makefile-${CND_CONF}.mk 
@@ -231,22 +239,6 @@ ${OBJECTDIR}/Drivers/p18f4620_uart.o: Drivers/p18f4620_uart.c  nbproject/Makefil
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_uart.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/Software/timer_software.o: Software/timer_software.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/Software" 
-	@${RM} ${OBJECTDIR}/Software/timer_software.o.d 
-	@${RM} ${OBJECTDIR}/Software/timer_software.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/timer_software.o   Software/timer_software.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/Software/timer_software.o 
-	@${FIXDEPS} "${OBJECTDIR}/Software/timer_software.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main.o.d 
-	@${RM} ${OBJECTDIR}/main.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
 ${OBJECTDIR}/Drivers/p18f4620_adc.o: Drivers/p18f4620_adc.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/Drivers" 
 	@${RM} ${OBJECTDIR}/Drivers/p18f4620_adc.o.d 
@@ -263,6 +255,14 @@ ${OBJECTDIR}/Drivers/p18f4620_pwm.o: Drivers/p18f4620_pwm.c  nbproject/Makefile-
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_pwm.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/Software/timer_software.o: Software/timer_software.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Software" 
+	@${RM} ${OBJECTDIR}/Software/timer_software.o.d 
+	@${RM} ${OBJECTDIR}/Software/timer_software.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/timer_software.o   Software/timer_software.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Software/timer_software.o 
+	@${FIXDEPS} "${OBJECTDIR}/Software/timer_software.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 ${OBJECTDIR}/Software/menu.o: Software/menu.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/Software" 
 	@${RM} ${OBJECTDIR}/Software/menu.o.d 
@@ -278,6 +278,22 @@ ${OBJECTDIR}/Software/sensor.o: Software/sensor.c  nbproject/Makefile-${CND_CONF
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/sensor.o   Software/sensor.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Software/sensor.o 
 	@${FIXDEPS} "${OBJECTDIR}/Software/sensor.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/main.o   main.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Software/uart.o: Software/uart.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Software" 
+	@${RM} ${OBJECTDIR}/Software/uart.o.d 
+	@${RM} ${OBJECTDIR}/Software/uart.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/uart.o   Software/uart.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Software/uart.o 
+	@${FIXDEPS} "${OBJECTDIR}/Software/uart.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

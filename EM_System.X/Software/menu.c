@@ -36,8 +36,8 @@ void Display_menu(void)
   float value_1 = 0;
   float value_2 = 0;
   if(curr_index != 1)
-    value_1 = Sensor_Get_Value(SensorName[0]);
-  value_2 = Sensor_Get_Value(SensorName[0]);
+    value_1 = Sensor_Get_Value(SensorName[curr_index - 2]);
+  value_2 = Sensor_Get_Value(SensorName[curr_index - 1]);
   LCD_Clear_Buffer_All();
   LCD_Print_String(0, 0, menu[curr_index - 1]);
   LCD_Print_String(1, 0, menu[curr_index]);

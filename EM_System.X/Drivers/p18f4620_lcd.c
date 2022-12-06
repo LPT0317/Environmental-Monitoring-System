@@ -146,10 +146,9 @@ void LCD_Print_String(unsigned int row, unsigned int col, const rom unsigned cha
     *data++;
   }
 }
-void LCD_Print_Float(unsigned int row, unsigned int col, float number)
+void LCD_Print_Num(unsigned int row, unsigned int col, long number)
 {
   unsigned int i = 0;
-  int temp = number;
   unsigned int diff_zero = 0;
   
   current_row = row % 2;
@@ -160,14 +159,14 @@ void LCD_Print_Float(unsigned int row, unsigned int col, float number)
   if(number < 0)
   {
     Add_Buffer('-');
-    number = number * -1.0;
+    number = number * -1;
   }
   
-  for(i = 1000; i > 0; i = i / 10)
+  for(i = 10000; i > 0; i = i / 10)
   {
-    if(temp / i != 0)
+    if(number / i != 0)
     {
-      Add_Buffer(temp / i + '0');
+      Add_Buffer(number / i + '0');
       diff_zero = 1;
     }
     else
@@ -175,13 +174,28 @@ void LCD_Print_Float(unsigned int row, unsigned int col, float number)
       if(diff_zero == 1)
         Add_Buffer('0');
     }
-    temp = temp % i;
+    number = number % i;
   }
-  Add_Buffer('.');
-  number = number * 100;
-  temp = (int)number % 100;
-  Add_Buffer(temp / 10 + '0');
-  Add_Buffer(temp % 10 + '0');
+}
+void LCD_Print_Float(unsigned int row, unsigned int col, long number)
+{
+  long temp_num = number;
+  unsigned int i = 0;
+  if(temp_num / 1000 != 0)
+  {
+    LCD_Print_Num(row, col + i, temp_num / 1000);
+    i++;
+  }
+  temp_num = temp_num % 1000;
+  LCD_Print_Num(row, col + i, temp_num / 100);
+  i++;
+  temp_num = temp_num % 100;
+  LCD_Print_Char(row, col + i, '.');
+  i++;
+  LCD_Print_Num(row, col + i, temp_num / 10);
+  i++;
+  LCD_Print_Num(row, col + i, temp_num % 10);
+  i++;
 }
 void LCD_Switch_Line(unsigned row_clear)
 {

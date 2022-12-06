@@ -23,6 +23,8 @@ void PIC_UART_ISR(void);
 char PIC_UART_RECEIVE(void);
 void PIC_UART_TRANSMIT_CHAR(char data);
 void PIC_UART_TRANSMIT_STRING(const rom char *data);
+void PIC_UART_TRANSMIT_NUM(long num);
+void PIC_UART_TRANSMIT_FLOAT(long num);
 
 #ifdef	__cplusplus
 }

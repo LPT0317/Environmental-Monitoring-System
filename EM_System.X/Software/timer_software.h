@@ -16,6 +16,8 @@ extern "C"
 /* Defines -------------------------------------------------------------------*/
 #define NO_TIMER 1
 #define TIME_CYCLE 10
+  
+#define UART_TIMER 0
 
 /* Function prototypes -------------------------------------------------------*/
 // Timer Run

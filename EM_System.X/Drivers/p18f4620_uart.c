@@ -29,8 +29,7 @@ char PIC_UART_RECEIVE(void)
 }
 void PIC_UART_TRANSMIT_CHAR(char data)
 {
-  //while(PIR1bits.TXIF == 0);
-  PIR1bits.TXIF = 1;
+  while(PIR1bits.TXIF == 0);
   TXREG = data;
   PIR1bits.TXIF = 0;
 }
@@ -41,6 +40,46 @@ void PIC_UART_TRANSMIT_STRING(const rom char *data)
     PIC_UART_TRANSMIT_CHAR(*data);
     *data++;
   }
+}
+void PIC_UART_TRANSMIT_NUM(long number)
+{
+  unsigned int i = 0;
+  unsigned int diff_zero = 0;
+  
+  if(number == 0)
+    PIC_UART_TRANSMIT_CHAR('0');
+  if(number < 0)
+  {
+    PIC_UART_TRANSMIT_CHAR('-');
+    number = number * -1;
+  }
+  
+  for(i = 10000; i > 0; i = i / 10)
+  {
+    if(number / i != 0)
+    {
+      PIC_UART_TRANSMIT_CHAR(number / i + '0');
+      diff_zero = 1;
+    }
+    else
+    {
+      if(diff_zero == 1)
+        PIC_UART_TRANSMIT_CHAR('0');
+    }
+    number = number % i;
+  }
+}
+void PIC_UART_TRANSMIT_FLOAT(long number)
+{
+  long temp_num = number;
+  if(temp_num / 1000 != 0)
+    PIC_UART_TRANSMIT_NUM(temp_num / 1000);
+  temp_num = temp_num % 1000;
+  PIC_UART_TRANSMIT_NUM(temp_num / 100);
+  temp_num = temp_num % 100;
+  PIC_UART_TRANSMIT_CHAR('.');
+  PIC_UART_TRANSMIT_NUM(temp_num / 10);
+  PIC_UART_TRANSMIT_NUM(temp_num % 10);
 }
 void PIC_UART_ISR(void)
 {

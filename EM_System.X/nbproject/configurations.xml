@@ -17,6 +17,7 @@
         <itemPath>Software/timer_software.h</itemPath>
         <itemPath>Software/menu.h</itemPath>
         <itemPath>Software/sensor.h</itemPath>
+        <itemPath>Software/uart.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -40,6 +41,7 @@
         <itemPath>Software/timer_software.c</itemPath>
         <itemPath>Software/menu.c</itemPath>
         <itemPath>Software/sensor.c</itemPath>
+        <itemPath>Software/uart.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

@@ -19,10 +19,12 @@
 #include "Software/timer_software.h"
 #include "Software/menu.h"
 #include "Software/sensor.h"
+#include "Software/uart.h"
 
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
+
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_TIM3_INIT(void);
@@ -58,6 +60,7 @@ void main(void)
   while(1)
   {
     fsm_menu();
+    UART_DATA();
   }
 }
 
@@ -92,6 +95,7 @@ void TIM3_CALLBACK(void)
 {
   timer_Run();
   PIC_SCAN_BUTTON();
-  Sensor_Calc_pH();
+  Sensor_Calc();
+  Var_Resistor_Get_Value();
 }
 /*****************************END OF FILE**************************************/
