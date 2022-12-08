@@ -5,7 +5,8 @@
         <group>
             <file>file:/D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/main.c</file>
             <file>file:/D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/uart.c</file>
-            <file>file:/D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/uart.h</file>
+            <file>file:/D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/sensor.c</file>
+            <file>file:/D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Drivers/p18f4620_uart.c</file>
         </group>
     </open-files>
 </project-private>

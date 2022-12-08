@@ -23,7 +23,7 @@ void UART_DATA(void)
       }
       break;
     case SEND:
-      PIC_UART_TRANSMIT_STRING("20.04.16 09:12:07  pH=  ");
+      PIC_UART_TRANSMIT_STRING("pH=  ");
       PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Value(pH_Sensor));
       PIC_UART_TRANSMIT_STRING(" pH SS= ");
       PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Value(SS_Sensor));
