@@ -75,7 +75,7 @@ static void MX_GPIO_INIT(void)
   LCD_INIT();
   PIC_UART_INIT();
   PIC_ADC_INIT();
-  //PIC_PWM_INIT();
+  PIC_PWM_INIT();
 }
 
 /**

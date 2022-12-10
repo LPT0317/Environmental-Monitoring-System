@@ -4,8 +4,8 @@
 #include "p18f4620_gpio.h"
 
 /* Variables -----------------------------------------------------------------*/
-unsigned char scan_output[4] = {0x10, 0x20, 0x40, 0x80};
-unsigned char scan_input[4] = {0x01, 0x02, 0x04, 0x08};
+unsigned char scan_output[4] = {0x10, 0x20, 0x80};
+unsigned char scan_input[4] = {0x01, 0x02, 0x08};
 
 unsigned int button_res[NO_BUTTON] = {0};
 
