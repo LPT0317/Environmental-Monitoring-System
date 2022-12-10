@@ -29,6 +29,7 @@ extern "C"
 long Sensor_Get_Value(unsigned int sensor_name);
 void Sensor_Calc(void);
 void ADC_Channel0(void);
+void ADC_Channel1(void);
 
 #ifdef	__cplusplus
 }

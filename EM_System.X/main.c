@@ -97,5 +97,6 @@ void TIM3_CALLBACK(void)
   PIC_SCAN_BUTTON();
   Sensor_Calc();
   ADC_Channel0();
+  ADC_Channel1();
 }
 /*****************************END OF FILE**************************************/

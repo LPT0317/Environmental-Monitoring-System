@@ -6,11 +6,24 @@ long Sensor[7];
 
 unsigned int adc_min = 0;
 unsigned int adc_max = 1023;
+
+/*
+ * Channel 0
+ */
 long adc0_value = 0;
 int adc0_raw = 0;
 unsigned int adc0_total = 0;
 unsigned int adc0_data[50];
 int adc0_index = 0;
+
+/*
+ * Channel 1
+ */
+long adc1_value = 0;
+int adc1_raw = 0;
+unsigned int adc1_total = 0;
+unsigned int adc1_data[50];
+int adc1_index = 0;
 
 /*
  * pH Sensor
@@ -68,7 +81,7 @@ void Sensor_Calc(void)
                                                           / (adc_max - adc_min);
   Sensor[COD_Sensor] = COD_min + (adc0_value - adc_min) * (COD_max - COD_min) 
                                                           / (adc_max - adc_min);
-  Sensor[TEMP_Sensor] = TEMP_min + (adc0_value - adc_min) * (TEMP_max - TEMP_min) 
+  Sensor[TEMP_Sensor] = TEMP_min + (adc1_value - adc_min) * (TEMP_max - TEMP_min) 
                                                           / (adc_max - adc_min);
   Sensor[NH4_Sensor] = NH4_min + (adc0_value - adc_min) * (NH4_max - NH4_min) 
                                                           / (adc_max - adc_min);
@@ -95,4 +108,23 @@ void ADC_Channel0(void)
       adc0_idx--;
   }
   adc0_value = (long)(adc0_total) / 50;
+}
+void ADC_Channel1(void)
+{
+  int adc1_idx = 0;
+  int i = 0;
+  adc1_raw = PIC_GET_ADC(1);
+  adc1_data[adc1_index] = adc1_raw;
+  adc1_index = (adc1_index + 1) % 50;
+  adc1_idx = adc1_index;
+  adc1_total = 0;
+  for(i = 0; i < 50; i++)
+  {
+    adc1_total += adc1_data[adc1_idx];
+    if(adc1_idx == 0)
+      adc1_idx = 49;
+    else
+      adc1_idx--;
+  }
+  adc1_value = (long)(adc1_total) / 50;
 }
