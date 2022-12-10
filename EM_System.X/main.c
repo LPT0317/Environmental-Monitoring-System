@@ -59,8 +59,8 @@ void main(void)
   /* Infinite loop */
   while(1)
   {
-    fsm_menu();
-    UART_DATA();
+    //fsm_menu();
+    //UART_DATA();
   }
 }
 
