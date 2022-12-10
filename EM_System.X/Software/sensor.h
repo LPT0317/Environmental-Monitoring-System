@@ -26,9 +26,9 @@ extern "C"
 #define FLOW_Sensor 6
   
 /* Function prototypes -------------------------------------------------------*/
-float Sensor_Get_Value(unsigned int sensor_name);
+long Sensor_Get_Value(unsigned int sensor_name);
 void Sensor_Calc(void);
-void Var_Resistor_Get_Value(void);
+void ADC_Channel0(void);
 
 #ifdef	__cplusplus
 }

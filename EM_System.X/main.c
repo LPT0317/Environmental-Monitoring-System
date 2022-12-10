@@ -96,6 +96,6 @@ void TIM3_CALLBACK(void)
   timer_Run();
   PIC_SCAN_BUTTON();
   Sensor_Calc();
-  Var_Resistor_Get_Value();
+  ADC_Channel0();
 }
 /*****************************END OF FILE**************************************/
