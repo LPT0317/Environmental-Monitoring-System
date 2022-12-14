@@ -20,14 +20,22 @@ void fsm_main_menu(void)
       main_menu_state = MENU_VALUE;
       break;
     case MENU_VALUE:
+      buzzer_off();
       fsm_menu_value();
       if(PIC_GPIO_ReadPin(GPIO_PIN_B) == 1)
         main_menu_state = MENU_SETTING;
+      if(Error_flag == 1)
+        main_menu_state = MENU_ALERT;
       break;
     case MENU_SETTING:
+      buzzer_off();
       fsm_menu_setting();
       if(PIC_GPIO_ReadPin(GPIO_PIN_B) == 1)
         main_menu_state = MENU_VALUE;
       break;
+    case MENU_ALERT:
+      buzzer_blink();
+      if(Error_flag == 0)
+        main_menu_state = MENU_VALUE;
   }
 }

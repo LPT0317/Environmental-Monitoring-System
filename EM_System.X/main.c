@@ -24,6 +24,7 @@
 #include "Software/main_menu.h"
 #include "Software/menu_set.h"
 #include "Software/menu_var.h"
+#include "Software/buzzer.h"
 
 /* USER CODE END Includes */
 

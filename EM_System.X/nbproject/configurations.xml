@@ -22,6 +22,8 @@
         <itemPath>Software/threshold.h</itemPath>
         <itemPath>Software/main_menu.h</itemPath>
         <itemPath>Software/menu_set.h</itemPath>
+        <itemPath>Software/buzzer.h</itemPath>
+        <itemPath>Software/menu_alert.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -50,6 +52,8 @@
         <itemPath>Software/threshold.c</itemPath>
         <itemPath>Software/main_menu.c</itemPath>
         <itemPath>Software/menu_set.c</itemPath>
+        <itemPath>Software/buzzer.c</itemPath>
+        <itemPath>Software/menu_alert.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

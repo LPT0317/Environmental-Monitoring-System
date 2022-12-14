@@ -17,6 +17,7 @@ extern "C"
 #include "../Drivers/p18f4620_gpio.h"
 #include "../Software/menu_var.h"
 #include "../Software/menu_value.h"
+#include "../Software/buzzer.h"
   
 /* Function prototypes -------------------------------------------------------*/
 void fsm_main_menu(void);
