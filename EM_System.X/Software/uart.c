@@ -4,7 +4,8 @@
 /* State Machine -------------------------------------------------------------*/
 #define INIT 0
 #define IDLE 1
-#define SEND 2
+#define SEND_VALUE 2
+#define SEND_ALERT 3
 int uart_state = INIT;
 
 /* Function prototypes -------------------------------------------------------*/
@@ -19,10 +20,10 @@ void UART_DATA(void)
     case IDLE:
       if(is_Timer_Out(UART_TIMER) == 1)
       {
-        uart_state = SEND;
+        uart_state = SEND_VALUE;
       }
       break;
-    case SEND:
+    case SEND_VALUE:
       PIC_UART_TRANSMIT_STRING("pH= ");
       PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Value(pH_Sensor));
       PIC_UART_TRANSMIT_STRING(" pH SS= ");
