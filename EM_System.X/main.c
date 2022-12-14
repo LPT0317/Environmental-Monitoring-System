@@ -17,9 +17,13 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Software/timer_software.h"
-#include "Software/menu.h"
+#include "Software/menu_value.h"
 #include "Software/sensor.h"
 #include "Software/uart.h"
+#include "Software/threshold.h"
+#include "Software/main_menu.h"
+#include "Software/menu_set.h"
+#include "Software/menu_var.h"
 
 /* USER CODE END Includes */
 
@@ -59,8 +63,9 @@ void main(void)
   /* Infinite loop */
   while(1)
   {
-    //fsm_menu();
-    //UART_DATA();
+    fsm_main_menu();
+    UART_DATA();
+    //LCD_Dislay();
   }
 }
 
@@ -76,6 +81,7 @@ static void MX_GPIO_INIT(void)
   PIC_UART_INIT();
   PIC_ADC_INIT();
   PIC_PWM_INIT();
+  PIC_PWM_SET(0);
 }
 
 /**
@@ -98,5 +104,8 @@ void TIM3_CALLBACK(void)
   Sensor_Calc();
   ADC_Channel0();
   ADC_Channel1();
+  ADC_Channel2();
+  ADC_Channel3();
+  check_Sensor();
 }
 /*****************************END OF FILE**************************************/

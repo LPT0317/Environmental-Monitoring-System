@@ -28,11 +28,11 @@ void PIC_SCAN_BUTTON(void)
     {
         if((PORTC & scan_input[j]) == 0)
         {
-            button_res[i * 4 + j] = 1;
+            button_res[i * 3 + j] = 1;
         }
         else
         {
-            button_res[i * 4 + j] = 0;
+            button_res[i * 3 + j] = 0;
         }
     }
   }

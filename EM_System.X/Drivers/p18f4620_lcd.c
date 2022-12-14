@@ -181,7 +181,15 @@ void LCD_Print_Float(unsigned int row, unsigned int col, long number)
 {
   long temp_num = number;
   unsigned int i = 0;
-  if(temp_num / 1000 != 0)
+  unsigned int diff = 0;
+  if(temp_num / 10000 != 0)
+  {
+    LCD_Print_Num(row, col + i, temp_num / 10000);
+    diff = 1;
+    i++;
+  }
+  temp_num = temp_num % 10000;
+  if(temp_num / 1000 != 0 || diff == 1)
   {
     LCD_Print_Num(row, col + i, temp_num / 1000);
     i++;

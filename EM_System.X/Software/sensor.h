@@ -30,6 +30,10 @@ long Sensor_Get_Value(unsigned int sensor_name);
 void Sensor_Calc(void);
 void ADC_Channel0(void);
 void ADC_Channel1(void);
+void ADC_Channel2(void);
+void ADC_Channel3(void);
+unsigned int Sensor_Get_Max(unsigned int sensor_name);
+unsigned int Sensor_Get_Min(unsigned int sensor_name);
 
 #ifdef	__cplusplus
 }

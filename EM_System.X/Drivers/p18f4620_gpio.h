@@ -19,10 +19,10 @@ extern "C"
 /* Defines GPIO --------------------------------------------------------------*/
 #define GPIO_PIN_1 0
 #define GPIO_PIN_2 1
-#define GPIO_PIN_A 3
-#define GPIO_PIN_4 4      
-#define GPIO_PIN_5 5
-#define GPIO_PIN_B 7
+#define GPIO_PIN_A 2
+#define GPIO_PIN_4 3      
+#define GPIO_PIN_5 4
+#define GPIO_PIN_B 5
 
 #define MAX_ROW 2
 #define MAX_COL 3

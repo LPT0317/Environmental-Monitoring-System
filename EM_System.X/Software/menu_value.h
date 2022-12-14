@@ -1,5 +1,5 @@
 /* 
- * File:   menu.h
+ * File:   menu_value.h
  * Author: lephu
  *
  * Created on December 1, 2022, 7:07 PM
@@ -16,15 +16,15 @@ extern "C"
 /* Includes ------------------------------------------------------------------*/
 #include "../Drivers/p18f4620_lcd.h"
 #include "../Drivers/p18f4620_gpio.h"
-#include "../Software/sensor.h"
+#include "../Software/menu_var.h"
   
 /* Function prototypes -------------------------------------------------------*/
-void fsm_menu(void);
+void fsm_menu_value(void);
 
 
 #ifdef	__cplusplus
 }
 #endif
 
-#endif	/* MENU_H */
+#endif	/* MENU_VALUE_H */
 
