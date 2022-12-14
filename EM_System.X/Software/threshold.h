@@ -24,6 +24,7 @@ void check_Sensor(void);
 long Sensor_Get_Threshold(unsigned int sensor_name);
 void threshold_INC(unsigned int sensor_name);
 void threshold_DEC(unsigned int sensor_name);
+unsigned int check_Sensor_threshold(unsigned int sensor_name);
 
 #ifdef	__cplusplus
 }

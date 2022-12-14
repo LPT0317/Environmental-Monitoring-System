@@ -14,11 +14,12 @@ extern "C"
 #endif
   
 /* Defines -------------------------------------------------------------------*/
-#define NO_TIMER 2
+#define NO_TIMER 3
 #define TIME_CYCLE 10
   
 #define UART_TIMER 0
 #define BUZZER_TIMER 1
+#define ALERT_TIMER 2
 
 /* Function prototypes -------------------------------------------------------*/
 // Timer Run

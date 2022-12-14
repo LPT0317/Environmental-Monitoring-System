@@ -13,7 +13,15 @@ extern "C"
 {
 #endif
 
-
+/* Includes ------------------------------------------------------------------*/
+#include "../Drivers/p18f4620_lcd.h"
+#include "../Drivers/p18f4620_gpio.h"
+#include "../Software/menu_var.h"
+#include "../Software/threshold.h"
+#include "../Software/timer_software.h"
+  
+/* Function prototypes -------------------------------------------------------*/
+void fsm_menu_alert(void);
 
 
 #ifdef	__cplusplus

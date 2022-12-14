@@ -15,6 +15,7 @@ build/default/production/main.o:  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/menu_var.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/uart.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/main_menu.h  \
-	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/buzzer.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/menu_set.h  \
+	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/menu_alert.h  \
+	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/buzzer.h  \
 

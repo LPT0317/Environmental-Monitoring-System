@@ -42,3 +42,13 @@ void threshold_DEC(unsigned int sensor_name)
       threshold[sensor_name] -= 10;
   }
 }
+unsigned int check_Sensor_threshold(unsigned int sensor_name)
+{
+  if(sensor_name >= 0 && sensor_name < 7)
+  {
+    if(Sensor_Get_Value(sensor_name) >= threshold[sensor_name])
+      return 1;
+    else
+      return 0;
+  }
+}

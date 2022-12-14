@@ -17,6 +17,8 @@ extern "C"
 #include "../Drivers/p18f4620_gpio.h"
 #include "../Software/menu_var.h"
 #include "../Software/menu_value.h"
+#include "../Software/menu_set.h"
+#include "../Software/menu_alert.h"
 #include "../Software/buzzer.h"
   
 /* Function prototypes -------------------------------------------------------*/

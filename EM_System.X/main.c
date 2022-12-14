@@ -24,6 +24,7 @@
 #include "Software/main_menu.h"
 #include "Software/menu_set.h"
 #include "Software/menu_var.h"
+#include "Software/menu_alert.h"
 #include "Software/buzzer.h"
 
 /* USER CODE END Includes */
@@ -59,14 +60,12 @@ void main(void)
   MX_GPIO_INIT();
   
   /* USER CODE BEGIN 2 */
-  
   /* USER CODE END 2 */
   /* Infinite loop */
   while(1)
   {
     fsm_main_menu();
     UART_DATA();
-    //LCD_Dislay();
   }
 }
 

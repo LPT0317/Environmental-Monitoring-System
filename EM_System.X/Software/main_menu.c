@@ -35,6 +35,7 @@ void fsm_main_menu(void)
       break;
     case MENU_ALERT:
       buzzer_blink();
+      fsm_menu_alert();
       if(Error_flag == 0)
         main_menu_state = MENU_VALUE;
   }
