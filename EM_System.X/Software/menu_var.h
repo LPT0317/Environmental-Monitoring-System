@@ -21,6 +21,7 @@ extern rom unsigned char *menu[];
 extern unsigned int value_index[];
 extern unsigned int SensorName[7];
 extern rom unsigned char *value_header[];
+extern rom unsigned char *sensor_list[7];
 
 #ifdef	__cplusplus
 }

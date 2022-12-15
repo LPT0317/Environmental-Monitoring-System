@@ -15,3 +15,5 @@ unsigned int SensorName[7] = {pH_Sensor, SS_Sensor, COD_Sensor, TEMP_Sensor,
 rom unsigned char *value_header[] = {"SENSOR VALUE",
                                      "SENSOR SETTING",
                                      "SENSOR ALERT"};
+rom unsigned char *sensor_list[7] = {"pH", "SS", "COD", "TEMP",
+                                     "NH4", "NO3", "FLOW"};

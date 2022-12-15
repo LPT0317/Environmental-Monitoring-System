@@ -7,10 +7,12 @@
 #define SEND_VALUE 2
 #define SEND_ALERT 3
 int uart_state = INIT;
+int index = 0;
 
 /* Function prototypes -------------------------------------------------------*/
 void UART_DATA(void)
 {
+  int i = 0;
   switch(uart_state)
   {
     case INIT:
@@ -21,6 +23,11 @@ void UART_DATA(void)
       if(is_Timer_Out(UART_TIMER) == 1)
       {
         uart_state = SEND_VALUE;
+      }
+      if(Error_flag == 1)
+      {
+        uart_state = SEND_ALERT;
+        set_Timer(UART_TIMER, 1000);
       }
       break;
     case SEND_VALUE:
@@ -41,5 +48,32 @@ void UART_DATA(void)
       PIC_UART_TRANSMIT_STRING(" m3/h \r\n");
       set_Timer(UART_TIMER, 1000);
       uart_state = IDLE;
+      break;
+    case SEND_ALERT:
+      index = 0;
+      if(is_Timer_Out(UART_TIMER) == 1)
+      {
+        PIC_UART_TRANSMIT_STRING("SENSOR ALERT!!!\r");
+        PIC_UART_TRANSMIT_STRING("Over threshold!!!\r");
+        PIC_UART_TRANSMIT_STRING("SENSOR LIST: ");
+        for(i = 0; i < 7; i++)
+        {
+          if(check_Sensor_threshold(i) == 1)
+          {
+            if(index != 0)
+              PIC_UART_TRANSMIT_CHAR(',');
+            PIC_UART_TRANSMIT_STRING(sensor_list[i]);
+            index = 1;
+          }
+        }
+        PIC_UART_TRANSMIT_CHAR('\r');
+        set_Timer(UART_TIMER, 5000);
+      }
+      if(Error_flag == 0)
+      {
+        uart_state = IDLE;
+        set_Timer(UART_TIMER, 10);
+      }
+      break;
   }
 }

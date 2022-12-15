@@ -17,6 +17,8 @@ extern "C"
 #include "../Software/timer_software.h"
 #include "../Drivers/p18f4620_uart.h"
 #include "../Software/sensor.h"
+#include "../Software/threshold.h"
+#include "../Software/menu_var.h"
   
 /* Function prototypes -------------------------------------------------------*/
 void UART_DATA(void);

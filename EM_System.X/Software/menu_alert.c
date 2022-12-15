@@ -10,8 +10,6 @@
 /* Variables -----------------------------------------------------------------*/
 unsigned int menu_alert_status = INIT;
 rom unsigned char *threshold_warning = "Over threshold!!";
-rom unsigned char *sensor_list[7] = {"pH", "SS", "COD", "TEMP",
-                                     "NH4", "NO3", "FLOW"};
 unsigned int sensor_list_index[7] = {2, 2, 3, 4, 3, 3, 4};
 
 /* Function prototypes -------------------------------------------------------*/
