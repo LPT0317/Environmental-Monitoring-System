@@ -44,7 +44,7 @@ static void MX_GPIO_INIT(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
-int i = 0;
+
 /* MCU Configuration--------------------------------------------------------*/
 
 

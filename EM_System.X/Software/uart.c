@@ -6,8 +6,12 @@
 #define IDLE 1
 #define SEND_VALUE 2
 #define SEND_ALERT 3
+#define SEND_SETTING 4
+
+/* Variables -----------------------------------------------------------------*/
 int uart_state = INIT;
 int index = 0;
+int send = 0;
 
 /* Function prototypes -------------------------------------------------------*/
 void UART_DATA(void)
@@ -20,6 +24,7 @@ void UART_DATA(void)
       uart_state = IDLE;
       break;
     case IDLE:
+      send = 0;
       if(is_Timer_Out(UART_TIMER) == 1)
       {
         uart_state = SEND_VALUE;
@@ -29,6 +34,8 @@ void UART_DATA(void)
         uart_state = SEND_ALERT;
         set_Timer(UART_TIMER, 1000);
       }
+      if(check_SETTING() == 1)
+        uart_state = SEND_SETTING;
       break;
     case SEND_VALUE:
       PIC_UART_TRANSMIT_STRING("pH= ");
@@ -45,7 +52,7 @@ void UART_DATA(void)
       PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Value(NO3_Sensor));
       PIC_UART_TRANSMIT_STRING(" mg/l FLOW= ");
       PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Value(FLOW_Sensor));
-      PIC_UART_TRANSMIT_STRING(" m3/h \r\n");
+      PIC_UART_TRANSMIT_STRING(" m3/h \r");
       set_Timer(UART_TIMER, 1000);
       uart_state = IDLE;
       break;
@@ -68,12 +75,37 @@ void UART_DATA(void)
         }
         PIC_UART_TRANSMIT_CHAR('\r');
         set_Timer(UART_TIMER, 5000);
+        uart_state = SEND_ALERT;
       }
       if(Error_flag == 0)
       {
         uart_state = IDLE;
         set_Timer(UART_TIMER, 10);
       }
+      break;
+    case SEND_SETTING:
+      if(send == 0)
+      {
+        PIC_UART_TRANSMIT_STRING("SENSOR SETTING\r");
+        PIC_UART_TRANSMIT_STRING("pH= ");
+        PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Threshold(pH_Sensor));
+        PIC_UART_TRANSMIT_STRING(" pH\rSS= ");
+        PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Threshold(SS_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l\rCSB= ");
+        PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Threshold(COD_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l\rTMP= ");
+        PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Threshold(TEMP_Sensor));
+        PIC_UART_TRANSMIT_STRING(" C\rNH4= ");
+        PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Threshold(NH4_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l\rNO3= ");
+        PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Threshold(NO3_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l\rFLOW= ");
+        PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Threshold(FLOW_Sensor));
+        PIC_UART_TRANSMIT_STRING(" m3/h\r");
+        send = 1;
+      }
+      if(check_SETTING() == 0)
+        uart_state = IDLE;
       break;
   }
 }

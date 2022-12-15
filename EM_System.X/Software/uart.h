@@ -19,6 +19,7 @@ extern "C"
 #include "../Software/sensor.h"
 #include "../Software/threshold.h"
 #include "../Software/menu_var.h"
+#include "../Software/main_menu.h"
   
 /* Function prototypes -------------------------------------------------------*/
 void UART_DATA(void);

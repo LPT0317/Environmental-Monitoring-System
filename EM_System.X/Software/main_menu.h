@@ -26,6 +26,7 @@ extern "C"
   
 /* Function prototypes -------------------------------------------------------*/
 void fsm_main_menu(void);
+int check_SETTING(void);
 
 #ifdef	__cplusplus
 }
