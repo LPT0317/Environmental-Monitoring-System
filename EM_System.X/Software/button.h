@@ -1,12 +1,12 @@
 /* 
- * File:   menu_value.h
+ * File:   button.h
  * Author: lephu
  *
- * Created on December 1, 2022, 7:07 PM
+ * Created on December 15, 2022, 7:28 PM
  */
 
-#ifndef MENU_H
-#define	MENU_H
+#ifndef BUTTON_H
+#define	BUTTON_H
 
 #ifdef	__cplusplus
 extern "C"
@@ -14,18 +14,16 @@ extern "C"
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "../Drivers/p18f4620_lcd.h"
 #include "../Drivers/p18f4620_gpio.h"
-#include "../Software/menu_var.h"
-#include "../Software/button.h"
   
 /* Function prototypes -------------------------------------------------------*/
-void fsm_menu_value(void);
+void button_Input(void);
+unsigned int button_Pressed(unsigned int button_name);
 
 
 #ifdef	__cplusplus
 }
 #endif
 
-#endif	/* MENU_VALUE_H */
+#endif	/* BUTTON_H */
 

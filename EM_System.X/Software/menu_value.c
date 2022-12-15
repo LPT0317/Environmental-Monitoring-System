@@ -53,14 +53,14 @@ void fsm_menu_value(void)
       break;
     case FIRST_ROW:
       value_curr_index = 1;
-      if(PIC_GPIO_ReadPin(GPIO_PIN_5) == 1)
+      if(button_Pressed(GPIO_PIN_5) == 1)
       {
         value_scroll_Down();
         menu_value_status = MIDLE_ROW;
       }
       break;
     case MIDLE_ROW:
-      if(PIC_GPIO_ReadPin(GPIO_PIN_2) == 1)
+      if(button_Pressed(GPIO_PIN_2) == 1)
       {
         if(value_curr_index - 1 == 1){
           menu_value_status = FIRST_ROW;
@@ -70,7 +70,7 @@ void fsm_menu_value(void)
           value_scroll_Up();
         }
       }
-      if(PIC_GPIO_ReadPin(GPIO_PIN_5) == 1)
+      if(button_Pressed(GPIO_PIN_5) == 1)
       {
         if(value_curr_index + 1 == 7){
           menu_value_status = LAST_ROW;
@@ -83,7 +83,7 @@ void fsm_menu_value(void)
       break;
     case LAST_ROW:
       value_curr_index = 7;
-      if(PIC_GPIO_ReadPin(GPIO_PIN_2) == 1)
+      if(button_Pressed(GPIO_PIN_2) == 1)
       {
         value_scroll_Up();
         menu_value_status = MIDLE_ROW;

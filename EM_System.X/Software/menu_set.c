@@ -39,21 +39,21 @@ void fsm_menu_setting(void)
       menu_setting_status = IDLE;
       break;
     case IDLE:
-      if(PIC_GPIO_ReadPin(GPIO_PIN_2) == 1)
+      if(button_Pressed(GPIO_PIN_2) == 1)
       {
         if(setting_sensor_index < 6)
           menu_setting_status = NEXT;
       }
-      if(PIC_GPIO_ReadPin(GPIO_PIN_1) == 1)
+      if(button_Pressed(GPIO_PIN_1) == 1)
       {
         if(setting_sensor_index > 0)
           menu_setting_status = PREV;
       }
-      if(PIC_GPIO_ReadPin(GPIO_PIN_5) == 1)
+      if(button_Pressed(GPIO_PIN_5) == 1)
       {
         menu_setting_status = INC;
       }
-      if(PIC_GPIO_ReadPin(GPIO_PIN_4) == 1)
+      if(button_Pressed(GPIO_PIN_4) == 1)
       {
         menu_setting_status = DEC;
       }

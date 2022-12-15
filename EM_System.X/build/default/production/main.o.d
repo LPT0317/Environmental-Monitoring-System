@@ -8,6 +8,7 @@ build/default/production/main.o:  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Drivers/p18f4620_led.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/timer_software.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/sensor.h  \
+	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/button.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/threshold.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/main.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Drivers/p18f4620_tim.h  \

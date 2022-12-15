@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c Drivers/p18f4620_uart.c Drivers/p18f4620_adc.c Drivers/p18f4620_pwm.c Software/timer_software.c Software/sensor.c Software/uart.c Software/menu_value.c Software/menu_var.c Software/threshold.c Software/main_menu.c Software/menu_set.c Software/buzzer.c Software/menu_alert.c main.c Drivers/p18f4620_led.c Software/led.c
+SOURCEFILES_QUOTED_IF_SPACED=Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c Drivers/p18f4620_uart.c Drivers/p18f4620_adc.c Drivers/p18f4620_pwm.c Drivers/p18f4620_led.c Software/timer_software.c Software/sensor.c Software/uart.c Software/menu_value.c Software/menu_var.c Software/threshold.c Software/main_menu.c Software/menu_set.c Software/buzzer.c Software/menu_alert.c Software/led.c main.c Software/button.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o ${OBJECTDIR}/Drivers/p18f4620_uart.o ${OBJECTDIR}/Drivers/p18f4620_adc.o ${OBJECTDIR}/Drivers/p18f4620_pwm.o ${OBJECTDIR}/Software/timer_software.o ${OBJECTDIR}/Software/sensor.o ${OBJECTDIR}/Software/uart.o ${OBJECTDIR}/Software/menu_value.o ${OBJECTDIR}/Software/menu_var.o ${OBJECTDIR}/Software/threshold.o ${OBJECTDIR}/Software/main_menu.o ${OBJECTDIR}/Software/menu_set.o ${OBJECTDIR}/Software/buzzer.o ${OBJECTDIR}/Software/menu_alert.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_led.o ${OBJECTDIR}/Software/led.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d ${OBJECTDIR}/Drivers/p18f4620_lcd.o.d ${OBJECTDIR}/Drivers/p18f4620_uart.o.d ${OBJECTDIR}/Drivers/p18f4620_adc.o.d ${OBJECTDIR}/Drivers/p18f4620_pwm.o.d ${OBJECTDIR}/Software/timer_software.o.d ${OBJECTDIR}/Software/sensor.o.d ${OBJECTDIR}/Software/uart.o.d ${OBJECTDIR}/Software/menu_value.o.d ${OBJECTDIR}/Software/menu_var.o.d ${OBJECTDIR}/Software/threshold.o.d ${OBJECTDIR}/Software/main_menu.o.d ${OBJECTDIR}/Software/menu_set.o.d ${OBJECTDIR}/Software/buzzer.o.d ${OBJECTDIR}/Software/menu_alert.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Drivers/p18f4620_led.o.d ${OBJECTDIR}/Software/led.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o ${OBJECTDIR}/Drivers/p18f4620_uart.o ${OBJECTDIR}/Drivers/p18f4620_adc.o ${OBJECTDIR}/Drivers/p18f4620_pwm.o ${OBJECTDIR}/Drivers/p18f4620_led.o ${OBJECTDIR}/Software/timer_software.o ${OBJECTDIR}/Software/sensor.o ${OBJECTDIR}/Software/uart.o ${OBJECTDIR}/Software/menu_value.o ${OBJECTDIR}/Software/menu_var.o ${OBJECTDIR}/Software/threshold.o ${OBJECTDIR}/Software/main_menu.o ${OBJECTDIR}/Software/menu_set.o ${OBJECTDIR}/Software/buzzer.o ${OBJECTDIR}/Software/menu_alert.o ${OBJECTDIR}/Software/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Software/button.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/Drivers/p18f4620_tim.o.d ${OBJECTDIR}/Drivers/p18f4620_interrupt.o.d ${OBJECTDIR}/Drivers/p18f4620_gpio.o.d ${OBJECTDIR}/Drivers/p18f4620_lcd.o.d ${OBJECTDIR}/Drivers/p18f4620_uart.o.d ${OBJECTDIR}/Drivers/p18f4620_adc.o.d ${OBJECTDIR}/Drivers/p18f4620_pwm.o.d ${OBJECTDIR}/Drivers/p18f4620_led.o.d ${OBJECTDIR}/Software/timer_software.o.d ${OBJECTDIR}/Software/sensor.o.d ${OBJECTDIR}/Software/uart.o.d ${OBJECTDIR}/Software/menu_value.o.d ${OBJECTDIR}/Software/menu_var.o.d ${OBJECTDIR}/Software/threshold.o.d ${OBJECTDIR}/Software/main_menu.o.d ${OBJECTDIR}/Software/menu_set.o.d ${OBJECTDIR}/Software/buzzer.o.d ${OBJECTDIR}/Software/menu_alert.o.d ${OBJECTDIR}/Software/led.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Software/button.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o ${OBJECTDIR}/Drivers/p18f4620_uart.o ${OBJECTDIR}/Drivers/p18f4620_adc.o ${OBJECTDIR}/Drivers/p18f4620_pwm.o ${OBJECTDIR}/Software/timer_software.o ${OBJECTDIR}/Software/sensor.o ${OBJECTDIR}/Software/uart.o ${OBJECTDIR}/Software/menu_value.o ${OBJECTDIR}/Software/menu_var.o ${OBJECTDIR}/Software/threshold.o ${OBJECTDIR}/Software/main_menu.o ${OBJECTDIR}/Software/menu_set.o ${OBJECTDIR}/Software/buzzer.o ${OBJECTDIR}/Software/menu_alert.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Drivers/p18f4620_led.o ${OBJECTDIR}/Software/led.o
+OBJECTFILES=${OBJECTDIR}/Drivers/p18f4620_tim.o ${OBJECTDIR}/Drivers/p18f4620_interrupt.o ${OBJECTDIR}/Drivers/p18f4620_gpio.o ${OBJECTDIR}/Drivers/p18f4620_lcd.o ${OBJECTDIR}/Drivers/p18f4620_uart.o ${OBJECTDIR}/Drivers/p18f4620_adc.o ${OBJECTDIR}/Drivers/p18f4620_pwm.o ${OBJECTDIR}/Drivers/p18f4620_led.o ${OBJECTDIR}/Software/timer_software.o ${OBJECTDIR}/Software/sensor.o ${OBJECTDIR}/Software/uart.o ${OBJECTDIR}/Software/menu_value.o ${OBJECTDIR}/Software/menu_var.o ${OBJECTDIR}/Software/threshold.o ${OBJECTDIR}/Software/main_menu.o ${OBJECTDIR}/Software/menu_set.o ${OBJECTDIR}/Software/buzzer.o ${OBJECTDIR}/Software/menu_alert.o ${OBJECTDIR}/Software/led.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Software/button.o
 
 # Source Files
-SOURCEFILES=Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c Drivers/p18f4620_uart.c Drivers/p18f4620_adc.c Drivers/p18f4620_pwm.c Software/timer_software.c Software/sensor.c Software/uart.c Software/menu_value.c Software/menu_var.c Software/threshold.c Software/main_menu.c Software/menu_set.c Software/buzzer.c Software/menu_alert.c main.c Drivers/p18f4620_led.c Software/led.c
+SOURCEFILES=Drivers/p18f4620_tim.c Drivers/p18f4620_interrupt.c Drivers/p18f4620_gpio.c Drivers/p18f4620_lcd.c Drivers/p18f4620_uart.c Drivers/p18f4620_adc.c Drivers/p18f4620_pwm.c Drivers/p18f4620_led.c Software/timer_software.c Software/sensor.c Software/uart.c Software/menu_value.c Software/menu_var.c Software/threshold.c Software/main_menu.c Software/menu_set.c Software/buzzer.c Software/menu_alert.c Software/led.c main.c Software/button.c
 
 
 
@@ -158,6 +158,14 @@ ${OBJECTDIR}/Drivers/p18f4620_pwm.o: Drivers/p18f4620_pwm.c  nbproject/Makefile-
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_pwm.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/Drivers/p18f4620_led.o: Drivers/p18f4620_led.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Drivers" 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_led.o.d 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_led.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_led.o   Drivers/p18f4620_led.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_led.o 
+	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_led.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 ${OBJECTDIR}/Software/timer_software.o: Software/timer_software.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/Software" 
 	@${RM} ${OBJECTDIR}/Software/timer_software.o.d 
@@ -238,6 +246,14 @@ ${OBJECTDIR}/Software/menu_alert.o: Software/menu_alert.c  nbproject/Makefile-${
 	@${DEP_GEN} -d ${OBJECTDIR}/Software/menu_alert.o 
 	@${FIXDEPS} "${OBJECTDIR}/Software/menu_alert.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/Software/led.o: Software/led.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Software" 
+	@${RM} ${OBJECTDIR}/Software/led.o.d 
+	@${RM} ${OBJECTDIR}/Software/led.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/led.o   Software/led.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Software/led.o 
+	@${FIXDEPS} "${OBJECTDIR}/Software/led.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
@@ -246,21 +262,13 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/Drivers/p18f4620_led.o: Drivers/p18f4620_led.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/Drivers" 
-	@${RM} ${OBJECTDIR}/Drivers/p18f4620_led.o.d 
-	@${RM} ${OBJECTDIR}/Drivers/p18f4620_led.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_led.o   Drivers/p18f4620_led.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_led.o 
-	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_led.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/Software/led.o: Software/led.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/Software/button.o: Software/button.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/Software" 
-	@${RM} ${OBJECTDIR}/Software/led.o.d 
-	@${RM} ${OBJECTDIR}/Software/led.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/led.o   Software/led.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/Software/led.o 
-	@${FIXDEPS} "${OBJECTDIR}/Software/led.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/Software/button.o.d 
+	@${RM} ${OBJECTDIR}/Software/button.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/button.o   Software/button.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Software/button.o 
+	@${FIXDEPS} "${OBJECTDIR}/Software/button.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 else
 ${OBJECTDIR}/Drivers/p18f4620_tim.o: Drivers/p18f4620_tim.c  nbproject/Makefile-${CND_CONF}.mk 
@@ -318,6 +326,14 @@ ${OBJECTDIR}/Drivers/p18f4620_pwm.o: Drivers/p18f4620_pwm.c  nbproject/Makefile-
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_pwm.o   Drivers/p18f4620_pwm.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_pwm.o 
 	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_pwm.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/Drivers/p18f4620_led.o: Drivers/p18f4620_led.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Drivers" 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_led.o.d 
+	@${RM} ${OBJECTDIR}/Drivers/p18f4620_led.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_led.o   Drivers/p18f4620_led.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_led.o 
+	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_led.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 ${OBJECTDIR}/Software/timer_software.o: Software/timer_software.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/Software" 
@@ -399,6 +415,14 @@ ${OBJECTDIR}/Software/menu_alert.o: Software/menu_alert.c  nbproject/Makefile-${
 	@${DEP_GEN} -d ${OBJECTDIR}/Software/menu_alert.o 
 	@${FIXDEPS} "${OBJECTDIR}/Software/menu_alert.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/Software/led.o: Software/led.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/Software" 
+	@${RM} ${OBJECTDIR}/Software/led.o.d 
+	@${RM} ${OBJECTDIR}/Software/led.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/led.o   Software/led.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Software/led.o 
+	@${FIXDEPS} "${OBJECTDIR}/Software/led.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/main.o.d 
@@ -407,21 +431,13 @@ ${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${DEP_GEN} -d ${OBJECTDIR}/main.o 
 	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
-${OBJECTDIR}/Drivers/p18f4620_led.o: Drivers/p18f4620_led.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}/Drivers" 
-	@${RM} ${OBJECTDIR}/Drivers/p18f4620_led.o.d 
-	@${RM} ${OBJECTDIR}/Drivers/p18f4620_led.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Drivers/p18f4620_led.o   Drivers/p18f4620_led.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/Drivers/p18f4620_led.o 
-	@${FIXDEPS} "${OBJECTDIR}/Drivers/p18f4620_led.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
-	
-${OBJECTDIR}/Software/led.o: Software/led.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/Software/button.o: Software/button.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}/Software" 
-	@${RM} ${OBJECTDIR}/Software/led.o.d 
-	@${RM} ${OBJECTDIR}/Software/led.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/led.o   Software/led.c 
-	@${DEP_GEN} -d ${OBJECTDIR}/Software/led.o 
-	@${FIXDEPS} "${OBJECTDIR}/Software/led.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	@${RM} ${OBJECTDIR}/Software/button.o.d 
+	@${RM} ${OBJECTDIR}/Software/button.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"Drivers" -ms -oa-  -I ${MP_CC_DIR}\\..\\h  -fo ${OBJECTDIR}/Software/button.o   Software/button.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/Software/button.o 
+	@${FIXDEPS} "${OBJECTDIR}/Software/button.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 

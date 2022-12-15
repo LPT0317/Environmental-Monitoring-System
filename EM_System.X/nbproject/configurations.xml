@@ -26,6 +26,7 @@
         <itemPath>Software/buzzer.h</itemPath>
         <itemPath>Software/menu_alert.h</itemPath>
         <itemPath>Software/led.h</itemPath>
+        <itemPath>Software/button.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -58,6 +59,7 @@
         <itemPath>Software/buzzer.c</itemPath>
         <itemPath>Software/menu_alert.c</itemPath>
         <itemPath>Software/led.c</itemPath>
+        <itemPath>Software/button.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

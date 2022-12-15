@@ -28,6 +28,7 @@
 #include "Software/menu_alert.h"
 #include "Software/buzzer.h"
 #include "Software/led.h"
+#include "Software/button.h"
 
 /* USER CODE END Includes */
 
@@ -43,7 +44,7 @@ static void MX_GPIO_INIT(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
-
+int i = 0;
 /* MCU Configuration--------------------------------------------------------*/
 
 
@@ -111,5 +112,6 @@ void TIM3_CALLBACK(void)
   ADC_Channel2();
   ADC_Channel3();
   check_Sensor();
+  button_Input();
 }
 /*****************************END OF FILE**************************************/

@@ -22,6 +22,7 @@ extern "C"
 #include "../Software/menu_alert.h"
 #include "../Software/buzzer.h"
 #include "../Software/led.h"
+#include "../Software/button.h"
   
 /* Function prototypes -------------------------------------------------------*/
 void fsm_main_menu(void);

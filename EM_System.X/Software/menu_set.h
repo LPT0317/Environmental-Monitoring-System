@@ -18,6 +18,7 @@ extern "C"
 #include "../Drivers/p18f4620_gpio.h"
 #include "../Software/menu_var.h"
 #include "../Software/threshold.h"
+#include "../Software/button.h"
   
 /* Function prototypes -------------------------------------------------------*/
 void fsm_menu_setting(void);
