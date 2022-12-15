@@ -60,8 +60,12 @@ void UART_DATA(void)
       index = 0;
       if(is_Timer_Out(UART_TIMER) == 1)
       {
-        PIC_UART_TRANSMIT_STRING("SENSOR ALERT!!!\r");
-        PIC_UART_TRANSMIT_STRING("Over threshold!!!\r");
+        if(send == 0)
+        {
+          PIC_UART_TRANSMIT_STRING("SENSOR ALERT!!!\r");
+          PIC_UART_TRANSMIT_STRING("Over threshold!!!\r");
+          send = 1;
+        }
         PIC_UART_TRANSMIT_STRING("SENSOR LIST: ");
         for(i = 0; i < 7; i++)
         {
@@ -105,7 +109,10 @@ void UART_DATA(void)
         send = 1;
       }
       if(check_SETTING() == 0)
+      {
         uart_state = IDLE;
+        set_Timer(UART_TIMER, 10);
+      }
       break;
   }
 }
