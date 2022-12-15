@@ -15,11 +15,13 @@ extern "C"
 
 /* Includes ------------------------------------------------------------------*/
 #include "../Drivers/p18f4620_gpio.h"
+#include "../Drivers/p18f4620_led.h"
 #include "../Software/menu_var.h"
 #include "../Software/menu_value.h"
 #include "../Software/menu_set.h"
 #include "../Software/menu_alert.h"
 #include "../Software/buzzer.h"
+#include "../Software/led.h"
   
 /* Function prototypes -------------------------------------------------------*/
 void fsm_main_menu(void);

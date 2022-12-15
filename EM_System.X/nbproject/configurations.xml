@@ -12,6 +12,7 @@
         <itemPath>Drivers/p18f4620_uart.h</itemPath>
         <itemPath>Drivers/p18f4620_adc.h</itemPath>
         <itemPath>Drivers/p18f4620_pwm.h</itemPath>
+        <itemPath>Drivers/p18f4620_led.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Software" projectFiles="true">
         <itemPath>Software/timer_software.h</itemPath>
@@ -24,6 +25,7 @@
         <itemPath>Software/menu_set.h</itemPath>
         <itemPath>Software/buzzer.h</itemPath>
         <itemPath>Software/menu_alert.h</itemPath>
+        <itemPath>Software/led.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -42,6 +44,7 @@
         <itemPath>Drivers/p18f4620_uart.c</itemPath>
         <itemPath>Drivers/p18f4620_adc.c</itemPath>
         <itemPath>Drivers/p18f4620_pwm.c</itemPath>
+        <itemPath>Drivers/p18f4620_led.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="Software" projectFiles="true">
         <itemPath>Software/timer_software.c</itemPath>
@@ -54,6 +57,7 @@
         <itemPath>Software/menu_set.c</itemPath>
         <itemPath>Software/buzzer.c</itemPath>
         <itemPath>Software/menu_alert.c</itemPath>
+        <itemPath>Software/led.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

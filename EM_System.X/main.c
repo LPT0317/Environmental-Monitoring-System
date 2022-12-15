@@ -13,6 +13,7 @@
 #include "Drivers/p18f4620_uart.h"
 #include "Drivers/p18f4620_adc.h"
 #include "Drivers/p18f4620_pwm.h"
+#include "Drivers/p18f4620_led.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -26,6 +27,7 @@
 #include "Software/menu_var.h"
 #include "Software/menu_alert.h"
 #include "Software/buzzer.h"
+#include "Software/led.h"
 
 /* USER CODE END Includes */
 
@@ -60,6 +62,7 @@ void main(void)
   MX_GPIO_INIT();
   
   /* USER CODE BEGIN 2 */
+  
   /* USER CODE END 2 */
   /* Infinite loop */
   while(1)
@@ -81,6 +84,7 @@ static void MX_GPIO_INIT(void)
   PIC_UART_INIT();
   PIC_ADC_INIT();
   PIC_PWM_INIT();
+  PIC_LED_INIT();
   PIC_PWM_SET(0);
 }
 
