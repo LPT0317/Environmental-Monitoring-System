@@ -45,3 +45,9 @@ void fsm_main_menu(void)
         main_menu_state = MENU_VALUE;
   }
 }
+int check_Setting(void)
+{
+  if(main_menu_state == MENU_SETTING)
+    return 1;
+  return 0;
+}
