@@ -7,5 +7,6 @@ build/default/production/Software/menu_set.o:  \
 	D:/CE/HK221/Project_Logic_Design/Environmental-Monitoring-System/EM_System.X/Software/threshold.h  \
 	D:/CE/HK221/Project_Logic_Design/Environmental-Monitoring-System/EM_System.X/Software/button.h  \
 	D:/CE/HK221/Project_Logic_Design/Environmental-Monitoring-System/EM_System.X/Software/menu_set.h  \
+	D:/CE/HK221/Project_Logic_Design/Environmental-Monitoring-System/EM_System.X/Software/calib.h  \
 	D:/CE/HK221/Project_Logic_Design/Environmental-Monitoring-System/EM_System.X/Software/menu_var.h  \
 
