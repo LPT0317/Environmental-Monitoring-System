@@ -7,10 +7,10 @@
 /* Defines -------------------------------------------------------------------*/
 #define INIT 0
 #define MENU_VALUE      1
-#define MENU_SETTING    2
-#define MENU_ALERT      3
-#define MENU_CALIB_MAX  4
-#define MENU_CALIB_MIN  5
+#define MENU_CALIB_MAX  2
+#define MENU_CALIB_MIN  3
+#define MENU_SETTING    4
+#define MENU_ALERT      5
 
 /* Variables -----------------------------------------------------------------*/
 unsigned int main_menu_state = INIT;

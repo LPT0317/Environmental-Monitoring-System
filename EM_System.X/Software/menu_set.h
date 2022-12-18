@@ -20,9 +20,9 @@ extern "C"
 #include "../Software/threshold.h"
 #include "../Software/button.h"
   
-#define CALIB_MAX 0
-#define CALIB_MIN 1
-#define THRESHOLD 2
+#define CALIB_MAX 1
+#define CALIB_MIN 2
+#define THRESHOLD 3
     
 /* Function prototypes -------------------------------------------------------*/
 void fsm_menu_setting(unsigned int type);
