@@ -1,4 +1,4 @@
 build/default/production/Software/timer_software.o:  \
-	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/timer_software.c  \
-	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/timer_software.h  \
+	D:/CE/HK221/Project_Logic_Design/Environmental-Monitoring-System/EM_System.X/Software/timer_software.c  \
+	D:/CE/HK221/Project_Logic_Design/Environmental-Monitoring-System/EM_System.X/Software/timer_software.h  \
 

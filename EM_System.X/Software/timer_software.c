@@ -33,6 +33,13 @@ int set_Timer(unsigned timer, unsigned int duration)
   flag[timer] = 0;
   return 1;
 }
+
+//clear Timer
+void clear_Timer(unsigned timer) {
+    flag[timer] = 0;
+    counter[timer] = 0;
+}
+
 //check Timer flag
 int is_Timer_Out(unsigned timer)
 {

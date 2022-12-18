@@ -20,8 +20,12 @@ extern "C"
 #include "../Software/threshold.h"
 #include "../Software/button.h"
   
+#define CALIB_MAX 0
+#define CALIB_MIN 1
+#define THRESHOLD 2
+    
 /* Function prototypes -------------------------------------------------------*/
-void fsm_menu_setting(void);
+void fsm_menu_setting(unsigned int type);
 
 
 #ifdef	__cplusplus

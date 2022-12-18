@@ -31,7 +31,7 @@ void Display_menu_setting(void)
   LCD_Print_Float(1, value_index[setting_sensor_index], threshold_value);
   LCD_Dislay();
 }
-void fsm_menu_setting(void)
+void fsm_menu_setting(unsigned int type)
 {
   Display_menu_setting();
   switch(menu_setting_status) {
@@ -67,11 +67,27 @@ void fsm_menu_setting(void)
       menu_setting_status = IDLE;
       break;
     case INC:
-      threshold_INC(setting_sensor_index);
+        switch (type) {
+            case CALIB_MAX:
+                break;
+            case CALIB_MIN:
+                break;
+            case THRESHOLD:
+                threshold_INC(setting_sensor_index);
+                break;
+        }
       menu_setting_status = IDLE;
       break;
     case DEC:
-      threshold_DEC(setting_sensor_index);
+        switch (type) {
+            case CALIB_MAX:
+                break;
+            case CALIB_MIN:
+                break;
+            case THRESHOLD:
+                threshold_DEC(setting_sensor_index);
+                break;
+        }
       menu_setting_status = IDLE;
       break;
   }
