@@ -10,12 +10,12 @@
 #define WAIT_E 4
 #define WAIT_T 5
 
-char data = ' ';
 int command = NONE;
 int command_state = WAIT;
 
 void uart_communication(void)
 {
+  char data;
   data = RCREG;
   PIC_UART_TRANSMIT_CHAR(data);
   switch(command_state)
