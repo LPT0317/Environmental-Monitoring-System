@@ -9,7 +9,7 @@
 #define MENU_VALUE      1
 #define MENU_CALIB_MAX  2
 #define MENU_CALIB_MIN  3
-#define MENU_SETTING    4
+#define MENU_THRESHOLD  4
 #define MENU_ALERT      5
 
 /* Variables -----------------------------------------------------------------*/
@@ -35,10 +35,20 @@ void fsm_main_menu(void)
       break;
     /*----------------------------------*/
     case MENU_CALIB_MAX:
+        PIC_LED_ON(BLUE); 
         fsm_menu_setting(CALIB_MAX);
+        if(button_Pressed(GPIO_PIN_B) == 1)
+            main_menu_state = MENU_CALIB_MIN;
         break;
     /*----------------------------------*/
-    case MENU_SETTING:
+    case MENU_CALIB_MIN:
+        PIC_LED_ON(BLUE);
+        fsm_menu_setting(CALIB_MIN);
+        if(button_Pressed(GPIO_PIN_B) == 1)
+            main_menu_state = MENU_THRESHOLD;
+        break;
+    /*----------------------------------*/
+    case MENU_THRESHOLD:
       buzzer_off();
       PIC_LED_ON(BLUE);
       fsm_menu_setting(THRESHOLD);
@@ -57,7 +67,7 @@ void fsm_main_menu(void)
 }
 int check_Setting(void)
 {
-  if(main_menu_state == MENU_SETTING)
-    return 1;
-  return 0;
+  if(main_menu_state == MENU_VALUE)
+    return 0;
+  return 1;
 }
