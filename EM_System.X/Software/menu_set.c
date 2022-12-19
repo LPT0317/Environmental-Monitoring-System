@@ -25,11 +25,19 @@ void prev_Sensor(void)
 }
 void Display_menu_setting(unsigned int type)
 {
-  long threshold_value = Sensor_Get_Threshold(sensor_index);
+  long display_value;
+  switch (type) {
+    case THRESHOLD:
+      display_value = Sensor_Get_Threshold(sensor_index);
+      break;
+    default:
+      display_value = get_calib(type, sensor_index);
+      break;
+  }
   LCD_Clear_Buffer_All();
   LCD_Print_String(0, 0, value_header[type]);
   LCD_Print_String(1, 0, menu[sensor_index]);
-  LCD_Print_Float(1, value_index[sensor_index], threshold_value);
+  LCD_Print_Float(1, value_index[sensor_index], display_value);
   LCD_Dislay();
 }
 void fsm_menu_setting(unsigned int type)
