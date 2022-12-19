@@ -83,6 +83,7 @@ void PIC_UART_TRANSMIT_FLOAT(long number)
 }
 void PIC_UART_ISR(void)
 {
-  data_receive = RCREG;
+  //data_receive = RCREG;
   //TXREG = data_receive;
+  uart_communication();
 }

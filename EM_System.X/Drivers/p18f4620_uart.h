@@ -16,6 +16,7 @@ extern "C"
 /* Includes ------------------------------------------------------------------*/
 #include <p18f4620.h>
 #include "p18f4620_lcd.h"
+#include "../Software/communication.h"
 
 /* Function prototypes -------------------------------------------------------*/
 void PIC_UART_INIT(void);

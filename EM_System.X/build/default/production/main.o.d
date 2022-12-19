@@ -14,6 +14,7 @@ build/default/production/main.o:  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/main.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Drivers/p18f4620_tim.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Drivers/p18f4620_interrupt.h  \
+	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/communication.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/menu_value.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/menu_var.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/uart.h  \

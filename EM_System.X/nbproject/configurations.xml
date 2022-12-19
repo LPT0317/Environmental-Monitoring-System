@@ -28,6 +28,7 @@
         <itemPath>Software/led.h</itemPath>
         <itemPath>Software/button.h</itemPath>
         <itemPath>Software/calib.h</itemPath>
+        <itemPath>Software/communication.h</itemPath>
       </logicalFolder>
       <itemPath>main.h</itemPath>
     </logicalFolder>
@@ -62,6 +63,7 @@
         <itemPath>Software/led.c</itemPath>
         <itemPath>Software/button.c</itemPath>
         <itemPath>Software/calib.c</itemPath>
+        <itemPath>Software/communication.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>

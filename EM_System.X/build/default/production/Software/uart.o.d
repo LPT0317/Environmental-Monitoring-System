@@ -12,6 +12,7 @@ build/default/production/Software/uart.o:  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/menu_set.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Drivers/p18f4620_pwm.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/uart.h  \
+	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/communication.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/menu_var.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/main_menu.h  \
 	D:/PIC18/Project/Environmental-Monitoring-System/EM_System.X/Software/menu_value.h  \
