@@ -56,7 +56,8 @@ long Sensor_Get_Value(unsigned int sensor_name)
 }
 void Sensor_Calc(void)
 {
-    unsigned int index, calib_max, calib_min, temp_adc_value;
+    unsigned int index, calib_max, calib_min;
+    long temp_adc_value;
     for (index = 0; index < 7; index++) {
         calib_max = get_calib(CALIB_MAX, index);
         calib_min = get_calib(CALIB_MIN, index);
@@ -77,9 +78,9 @@ void Sensor_Calc(void)
                 temp_adc_value = adc3_value;
                 break;
         }
-//        Sensor[index] = calib_max + (adc0_value - adc_min) * 
-//                        (calib_max - calib_min) / (adc_max - adc_min);
-        Sensor[index] = 10;
+        Sensor[index] = calib_min + (temp_adc_value - adc_min) * 
+                        (calib_max - calib_min) / (adc_max - adc_min);
+//        Sensor[index] = calib_min;
     }
 //  Sensor[pH_Sensor] = pH_min + (adc0_value - adc_min) * (pH_max - pH_min) 
 //                                                          / (adc_max - adc_min);

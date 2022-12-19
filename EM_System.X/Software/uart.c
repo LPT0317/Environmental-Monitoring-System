@@ -26,12 +26,12 @@ void UART_DATA(void)
       {
         uart_state = SEND_VALUE;
       }
-      if(Error_flag == 1)
+      else if(Error_flag == 1)
       {
         uart_state = SEND_ALERT;
         set_Timer(UART_TIMER, 1000);
       }
-      if(check_Setting() == 1)
+      else if(check_Setting() == 1)
       {
         uart_state = SEND_SETTING;
         send = 0;

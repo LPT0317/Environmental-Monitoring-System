@@ -29,7 +29,7 @@ void calib_INC(unsigned int type, unsigned int sensor_name) {
     if (type == CALIB_MAX) {
         Sensor_Max[sensor_name]++;
         if (Sensor_Max[sensor_name] > MAX_CALIB_VAL) {
-            Sensor_Max[sensor_name] = Sensor_Min[sensor_name]+1;
+            Sensor_Max[sensor_name] = Sensor_Min[sensor_name] + 1;
         }
     }
     else {
