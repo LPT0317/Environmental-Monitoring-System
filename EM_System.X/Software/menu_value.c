@@ -1,11 +1,12 @@
 /* Includes ------------------------------------------------------------------*/
 #include "menu_value.h"
+#include "timer_software.h"
 
 /* Defines -------------------------------------------------------------------*/
-#define INIT 0
-#define FIRST_ROW 1
-#define MIDLE_ROW 2
-#define LAST_ROW 3
+#define INIT        0
+#define DISPLAY     1
+#define DOWN 2
+#define UP   3
 
 /* Variables -----------------------------------------------------------------*/
 unsigned int value_curr_index = 1;
@@ -15,11 +16,18 @@ unsigned int menu_value_status = INIT;
 void value_scroll_Up(void)
 {
   value_curr_index--;
+  if (value_curr_index == 0) value_curr_index = 7;
 }
 void value_scroll_Down(void)
 {
   value_curr_index++;
+  if (value_curr_index == 8) value_curr_index = 1;
 }
+
+void menu_value_reset() {
+  menu_value_status = INIT;
+}
+
 void Display_menu_value(void)
 {
   long value_1 = 0;
@@ -48,46 +56,31 @@ void fsm_menu_value(void)
   Display_menu_value();
   switch(menu_value_status) {
     case INIT:
-      menu_value_status = FIRST_ROW;
-      value_curr_index = 1;
-      break;
-    case FIRST_ROW:
-      value_curr_index = 1;
-      if(button_Pressed(GPIO_PIN_5) == 1)
-      {
+        menu_value_status = DISPLAY;
+        value_curr_index = 1;
+        set_Timer(MENU_TIMER, 3000);
+        break;
+    case DISPLAY:
+        Display_menu_value();
+        if(button_Pressed(GPIO_PIN_5) == 1 || is_Timer_Out(MENU_TIMER)) 
+        {
+            menu_value_status = DOWN;
+            clear_Timer(MENU_TIMER);
+            set_Timer(MENU_TIMER, 3000);            
+        }
+        else if (button_Pressed(GPIO_PIN_2) == 1) {
+            menu_value_status = UP;
+            clear_Timer(MENU_TIMER);
+            set_Timer(MENU_TIMER, 3000);      
+        }
+        break;
+    case DOWN:
         value_scroll_Down();
-        menu_value_status = MIDLE_ROW;
-      }
-      break;
-    case MIDLE_ROW:
-      if(button_Pressed(GPIO_PIN_2) == 1)
-      {
-        if(value_curr_index - 1 == 1){
-          menu_value_status = FIRST_ROW;
-        }
-        else
-        {
-          value_scroll_Up();
-        }
-      }
-      if(button_Pressed(GPIO_PIN_5) == 1)
-      {
-        if(value_curr_index + 1 == 7){
-          menu_value_status = LAST_ROW;
-        }
-        else
-        {
-          value_scroll_Down();
-        }
-      }
-      break;
-    case LAST_ROW:
-      value_curr_index = 7;
-      if(button_Pressed(GPIO_PIN_2) == 1)
-      {
+        menu_value_status = DISPLAY;
+        break;
+    case UP:
         value_scroll_Up();
-        menu_value_status = MIDLE_ROW;
-      }
-      break;
+        menu_value_status = DISPLAY;
+        break;
   }
 }

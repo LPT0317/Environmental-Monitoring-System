@@ -1,5 +1,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "threshold.h"
+#include "calib.h"
+#include "menu_set.h"
 
 /* Variables -----------------------------------------------------------------*/
 unsigned int Error_flag = 0;
@@ -30,7 +32,7 @@ void threshold_INC(unsigned int sensor_name)
 {
   if(sensor_name >= 0 && sensor_name < 7)
   {
-    if((threshold[sensor_name] + 10) <= Sensor_Get_Max(sensor_name))
+    if((threshold[sensor_name] + 10) <= get_calib(CALIB_MAX, sensor_name))
       threshold[sensor_name] += 10;
   }
 }
@@ -38,7 +40,7 @@ void threshold_DEC(unsigned int sensor_name)
 {
   if(sensor_name >= 0 && sensor_name < 7)
   {
-    if((threshold[sensor_name] - 10) >= Sensor_Get_Min(sensor_name))
+    if((threshold[sensor_name] - 10) >= get_calib(CALIB_MIN, sensor_name))
       threshold[sensor_name] -= 10;
   }
 }

@@ -1,5 +1,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "sensor.h"
+#include "menu_set.h"
+#include "calib.h"
 
 #define DEBOUNCE_DATA 20
 
@@ -45,53 +47,6 @@ unsigned int adc3_total = 0;
 unsigned int adc3_data[20];
 int adc3_index = 0;
 
-/*
- * Sensor max min value
- */
-unsigned int Sensor_Max[7] = {1000, 10000, 10000, 5000, 5000, 10000, 36000};
-unsigned int Sensor_Min[7] = {400, 0, 0, 2500, 1000, 2000, 0};
-
-/*
- * pH Sensor
- */
-unsigned int pH_max = 1000;
-unsigned int pH_min = 400;
-
-/*
- * SS Sensor
- */
-unsigned int SS_max = 10000;
-unsigned int SS_min = 0;
-
-/*
- * COD Sensor
- */
-unsigned int COD_max = 10000;
-unsigned int COD_min = 0;
-
-/*
- * TEMP Sensor
- */
-unsigned int TEMP_max = 5000;
-unsigned int TEMP_min = 2500;
-
-/*
- * NH4 Sensor
- */
-unsigned int NH4_max = 5000;
-unsigned int NH4_min = 1000;
-
-/*
- * NO3 Sensor
- */
-unsigned int NO3_max = 10000;
-unsigned int NO3_min = 2000;
-
-/*
- * FLOW Sensor
- */
-unsigned int FLOW_max = 36000;
-unsigned int FLOW_min = 0;
 /* Function prototypes -------------------------------------------------------*/
 long Sensor_Get_Value(unsigned int sensor_name)
 {
@@ -101,20 +56,46 @@ long Sensor_Get_Value(unsigned int sensor_name)
 }
 void Sensor_Calc(void)
 {
-  Sensor[pH_Sensor] = pH_min + (adc0_value - adc_min) * (pH_max - pH_min) 
-                                                          / (adc_max - adc_min);
-  Sensor[SS_Sensor] = SS_min + (adc0_value - adc_min) * (SS_max - SS_min) 
-                                                          / (adc_max - adc_min);
-  Sensor[COD_Sensor] = COD_min + (adc0_value - adc_min) * (COD_max - COD_min) 
-                                                          / (adc_max - adc_min);
-  Sensor[TEMP_Sensor] = TEMP_min + (adc1_value - adc_min) * (TEMP_max - TEMP_min) 
-                                                          / (adc_max - adc_min);
-  Sensor[NH4_Sensor] = NH4_min + (adc2_value - adc_min) * (NH4_max - NH4_min) 
-                                                          / (adc_max - adc_min);
-  Sensor[NO3_Sensor] = NO3_min + (adc2_value - adc_min) * (NO3_max - NO3_min) 
-                                                          / (adc_max - adc_min);
-  Sensor[FLOW_Sensor] = FLOW_min + (adc3_value - adc_min) * (FLOW_max - FLOW_min) 
-                                                          / (adc_max - adc_min);
+    unsigned int index, calib_max, calib_min;
+    long temp_adc_value;
+    for (index = 0; index < 7; index++) {
+        calib_max = get_calib(CALIB_MAX, index);
+        calib_min = get_calib(CALIB_MIN, index);
+        switch (index) {
+            case 0:
+            case 1:
+            case 2:
+                temp_adc_value = adc0_value;
+                break;
+            case 3:
+                temp_adc_value = adc1_value;
+                break;
+            case 4:
+            case 5:
+                temp_adc_value = adc2_value;
+                break;
+            case 6:
+                temp_adc_value = adc3_value;
+                break;
+        }
+        Sensor[index] = calib_min + (temp_adc_value - adc_min) * 
+                        (calib_max - calib_min) / (adc_max - adc_min);
+//        Sensor[index] = calib_min;
+    }
+//  Sensor[pH_Sensor] = pH_min + (adc0_value - adc_min) * (pH_max - pH_min) 
+//                                                          / (adc_max - adc_min);
+//  Sensor[SS_Sensor] = SS_min + (adc0_value - adc_min) * (SS_max - SS_min) 
+//                                                          / (adc_max - adc_min);
+//  Sensor[COD_Sensor] = COD_min + (adc0_value - adc_min) * (COD_max - COD_min) 
+//                                                          / (adc_max - adc_min);
+//  Sensor[TEMP_Sensor] = TEMP_min + (adc1_value - adc_min) * (TEMP_max - TEMP_min) 
+//                                                          / (adc_max - adc_min);
+//  Sensor[NH4_Sensor] = NH4_min + (adc2_value - adc_min) * (NH4_max - NH4_min) 
+//                                                          / (adc_max - adc_min);
+//  Sensor[NO3_Sensor] = NO3_min + (adc2_value - adc_min) * (NO3_max - NO3_min) 
+//                                                          / (adc_max - adc_min);
+//  Sensor[FLOW_Sensor] = FLOW_min + (adc3_value - adc_min) * (FLOW_max - FLOW_min) 
+//                                                          / (adc_max - adc_min);
 }
 void ADC_Channel0(void)
 {
@@ -191,16 +172,4 @@ void ADC_Channel3(void)
       adc3_idx--;
   }
   adc3_value = (long)(adc3_total) / DEBOUNCE_DATA;
-}
-unsigned int Sensor_Get_Max(unsigned int sensor_name)
-{
-  if(sensor_name < 0 || sensor_name >= 7)
-    return 0;
-  return Sensor_Max[sensor_name];
-}
-unsigned int Sensor_Get_Min(unsigned int sensor_name)
-{
-  if(sensor_name < 0 || sensor_name >= 7)
-    return 0;
-  return Sensor_Min[sensor_name];
 }

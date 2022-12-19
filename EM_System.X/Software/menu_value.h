@@ -21,7 +21,7 @@ extern "C"
   
 /* Function prototypes -------------------------------------------------------*/
 void fsm_menu_value(void);
-
+void menu_value_reset();
 
 #ifdef	__cplusplus
 }
