@@ -22,7 +22,7 @@ extern "C"
   
 /* Function prototypes -------------------------------------------------------*/
 void fsm_menu_alert(void);
-
+unsigned int is_alarming();
 
 #ifdef	__cplusplus
 }

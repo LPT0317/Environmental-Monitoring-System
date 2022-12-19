@@ -1,16 +1,18 @@
 /* Includes ------------------------------------------------------------------*/
 #include "menu_alert.h"
 #include "timer_software.h"
+#include "button.h"
 
 /* Defines -------------------------------------------------------------------*/
-#define INIT 0
-#define ALERT_TITLE 1
-#define ALERT_SENSOR 2
+#define INIT            0
+#define ALERT_TITLE     1
+#define ALERT_SENSOR    2
 
 /* Variables -----------------------------------------------------------------*/
 unsigned int menu_alert_status = INIT;
 rom unsigned char *threshold_warning = "Over threshold!!";
 unsigned int sensor_list_index[7] = {2, 2, 3, 4, 3, 3, 4};
+unsigned int buzzer_on = 1;
 
 /* Function prototypes -------------------------------------------------------*/
 void Display_menu_alert(void)
@@ -64,8 +66,10 @@ void fsm_menu_alert(void)
     case INIT:
       menu_alert_status = ALERT_TITLE;
       set_Timer(ALERT_TIMER, 1000);
+      buzzer_on = 1;
       break;
     case ALERT_TITLE:
+      if (button_Pressed(GPIO_PIN_5)) buzzer_on = 0;
       if(is_Timer_Out(ALERT_TIMER) == 1)
       {
         set_Timer(ALERT_TIMER, 5000);
@@ -73,6 +77,7 @@ void fsm_menu_alert(void)
       }
       break;
     case ALERT_SENSOR:
+      if (button_Pressed(GPIO_PIN_5)) buzzer_on = 0;
       if(is_Timer_Out(ALERT_TIMER) == 1)
       {
         set_Timer(ALERT_TIMER, 1000);
@@ -80,4 +85,8 @@ void fsm_menu_alert(void)
       }
       break;
   }
+}
+
+unsigned int is_alarming() {
+    return buzzer_on;
 }

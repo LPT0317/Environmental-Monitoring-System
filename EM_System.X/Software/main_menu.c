@@ -35,6 +35,7 @@ void fsm_main_menu(void)
       break;
     /*----------------------------------*/
     case MENU_CALIB_MAX:
+        buzzer_off();
         PIC_LED_ON(BLUE); 
         fsm_menu_setting(CALIB_MAX);
         if(button_Pressed(GPIO_PIN_B) == 1)
@@ -42,6 +43,7 @@ void fsm_main_menu(void)
         break;
     /*----------------------------------*/
     case MENU_CALIB_MIN:
+        buzzer_off();
         PIC_LED_ON(BLUE);
         fsm_menu_setting(CALIB_MIN);
         if(button_Pressed(GPIO_PIN_B) == 1)
@@ -58,7 +60,8 @@ void fsm_main_menu(void)
     /*----------------------------------*/
     case MENU_ALERT:
       led_blink();
-      buzzer_blink();
+      if (is_alarming()) buzzer_blink();
+      else buzzer_off();
       fsm_menu_alert();
       if(Error_flag == 0)
         main_menu_state = MENU_VALUE;
