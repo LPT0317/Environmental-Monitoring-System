@@ -70,6 +70,7 @@ void main(void)
   {
     //fsm_main_menu();
     //UART_DATA();
+    LCD_Dislay();
   }
 }
 

@@ -17,6 +17,7 @@ int command_state = WAIT;
 void uart_communication(void)
 {
   data = RCREG;
+  PIC_UART_TRANSMIT_CHAR(data);
   switch(command_state)
   {
     case WAIT:
@@ -41,7 +42,7 @@ void uart_communication(void)
         command_state = END;
       break;
     case END:
-      PIC_UART_TRANSMIT_CHAR('S');
+      LCD_Print_Char(0, 0, 'T');
       command_state = WAIT;
       break;
   }

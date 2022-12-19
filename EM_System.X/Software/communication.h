@@ -14,6 +14,7 @@ extern "C"
 #endif
 
 #include "../Drivers/p18f4620_uart.h"
+#include "../Drivers/p18f4620_lcd.h"
   
 void uart_communication(void);
 
