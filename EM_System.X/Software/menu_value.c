@@ -16,11 +16,18 @@ unsigned int menu_value_status = INIT;
 void value_scroll_Up(void)
 {
   value_curr_index--;
+  if (value_curr_index == 0) value_curr_index = 7;
 }
 void value_scroll_Down(void)
 {
   value_curr_index++;
+  if (value_curr_index == 8) value_curr_index = 1;
 }
+
+void menu_value_reset() {
+  menu_value_status = INIT;
+}
+
 void Display_menu_value(void)
 {
   long value_1 = 0;

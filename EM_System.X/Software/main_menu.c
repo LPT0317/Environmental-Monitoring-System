@@ -46,7 +46,7 @@ void fsm_main_menu(void)
         buzzer_off();
         PIC_LED_ON(BLUE);
         fsm_menu_setting(CALIB_MIN);
-        if(button_Pressed(GPIO_PIN_B) == 1)
+        if(button_Pressed(GPIO_PIN_B) == 1) 
             main_menu_state = MENU_THRESHOLD;
         break;
     /*----------------------------------*/
@@ -54,8 +54,10 @@ void fsm_main_menu(void)
       buzzer_off();
       PIC_LED_ON(BLUE);
       fsm_menu_setting(THRESHOLD);
-      if(button_Pressed(GPIO_PIN_B) == 1)
-        main_menu_state = MENU_VALUE;
+      if(button_Pressed(GPIO_PIN_B) == 1) {
+        main_menu_state = MENU_VALUE;        
+        menu_value_reset();
+      }
       break;
     /*----------------------------------*/
     case MENU_ALERT:
@@ -63,8 +65,10 @@ void fsm_main_menu(void)
       if (is_alarming()) buzzer_blink();
       else buzzer_off();
       fsm_menu_alert();
-      if(Error_flag == 0)
+      if(Error_flag == 0) {
         main_menu_state = MENU_VALUE;
+        menu_value_reset();
+      }
     /*----------------------------------*/
   }
 }
