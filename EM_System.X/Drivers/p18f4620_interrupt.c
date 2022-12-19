@@ -75,7 +75,7 @@ void PIC_LOW_ISR(void)
   if(PIR1bits.RCIF == 1)
   {
     PIR1bits.RCIF = 0;
-    //PIC_UART_ISR();
+    PIC_UART_ISR();
   }
 }
 
@@ -122,6 +122,6 @@ void PIC_HIGH_ISR(void)
   if(PIR1bits.RCIF == 1)
   {
     PIR1bits.RCIF = 0;
-    PIC_UART_ISR();
+    //PIC_UART_ISR();
   }
 }
