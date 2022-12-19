@@ -29,12 +29,12 @@ void calib_INC(unsigned int type, unsigned int sensor_name) {
     if (type == CALIB_MAX) {
         Sensor_Max[sensor_name]++;
         if (Sensor_Max[sensor_name] > MAX_CALIB_VAL) {
-            Sensor_Max[sensor_name] = Sensor_Min[sensor_name];
+            Sensor_Max[sensor_name] = Sensor_Min[sensor_name]+1;
         }
     }
     else {
         Sensor_Min[sensor_name]++;
-        if (Sensor_Min[sensor_name] > Sensor_Max[sensor_name]) {
+        if (Sensor_Min[sensor_name] == Sensor_Max[sensor_name]) {
             Sensor_Min[sensor_name] = MIN_CALIB_VAL;
         }
     }
@@ -44,4 +44,16 @@ void calib_DEC(unsigned int type, unsigned int sensor_name) {
     if(sensor_name < 0 || sensor_name >= 7)
       return;
     
+    if (type == CALIB_MAX) {
+        Sensor_Max[sensor_name]--;
+        if (Sensor_Max[sensor_name] == MIN_CALIB_VAL) {
+            Sensor_Max[sensor_name] = MAX_CALIB_VAL;
+        }
+    }
+    else {
+        Sensor_Min[sensor_name]--;
+        if (Sensor_Min[sensor_name] < MIN_CALIB_VAL) {
+            Sensor_Min[sensor_name] = Sensor_Max[sensor_name]-1;
+        }
+    }
 }
