@@ -39,11 +39,10 @@ void uart_communication(void)
       break;
     case WAIT_END:
       if(data == '#')
-        command_state = END;
-      break;
-    case END:
-      LCD_Print_Char(0, 0, 'T');
-      command_state = WAIT;
+      {
+        command_state = WAIT;
+        LCD_Print_String(0, 0, "HELLO");
+      }
       break;
   }
 }
