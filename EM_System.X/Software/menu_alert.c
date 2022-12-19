@@ -23,7 +23,7 @@ void Display_menu_alert(void)
   LCD_Clear_Buffer_All();
   if(menu_alert_status == ALERT_TITLE)
   {
-    LCD_Print_String(0, 0, value_header[2]);
+    LCD_Print_String(0, 0, value_header[4]);
     LCD_Print_String(1, 0, threshold_warning);
   }    
   else {
