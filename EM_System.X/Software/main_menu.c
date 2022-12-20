@@ -14,6 +14,7 @@
 
 /* Variables -----------------------------------------------------------------*/
 unsigned int main_menu_state = INIT;
+unsigned int error_checked = 1;
 
 /* Function prototypes -------------------------------------------------------*/
 void fsm_main_menu(void)
@@ -28,9 +29,10 @@ void fsm_main_menu(void)
       buzzer_off();
       PIC_LED_ON(GREEN);
       fsm_menu_value();
+      if(button_Pressed(GPIO_PIN_1) == 1) error_checked = 1 - error_checked;
       if(button_Pressed(GPIO_PIN_B) == 1)
         main_menu_state = MENU_CALIB_MAX;
-      if(Error_flag == 1)
+      else if(error_checked == 1 && Error_flag == 1)
         main_menu_state = MENU_ALERT;
       break;
     /*----------------------------------*/
@@ -65,16 +67,19 @@ void fsm_main_menu(void)
       if (is_alarming()) buzzer_blink();
       else buzzer_off();
       fsm_menu_alert();
-      if(Error_flag == 0) {
+      if(Error_flag == 0 || button_Pressed(GPIO_PIN_1) == 1) {
         main_menu_state = MENU_VALUE;
         menu_value_reset();
+        if (Error_flag != 0) error_checked = 0;
       }
     /*----------------------------------*/
   }
 }
 int check_Setting(void)
 {
-  if(main_menu_state == MENU_VALUE)
-    return 0;
-  return 1;
+  if(main_menu_state == MENU_VALUE) return 0;
+  if(main_menu_state == MENU_THRESHOLD) return 1;
+  if(main_menu_state == MENU_CALIB_MAX) return 2;
+  if(main_menu_state == MENU_CALIB_MIN) return 3;
+  return 4;
 }

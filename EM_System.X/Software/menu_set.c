@@ -74,8 +74,9 @@ void fsm_menu_setting(unsigned int type)
       break;
     ///////////////////////////////////////////////////
     case PREV:
-      sensor_index--;
-      if (sensor_index < 0) sensor_index = 6;
+      if (sensor_index == 0) sensor_index = 6;
+      else sensor_index--;
+//      if (sensor_index < 0) sensor_index = 6;
       menu_setting_status = IDLE;
       break;
     ///////////////////////////////////////////////////

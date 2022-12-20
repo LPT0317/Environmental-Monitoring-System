@@ -1,12 +1,15 @@
 /* Includes ------------------------------------------------------------------*/
 #include "uart.h"
+#include "calib.h"
 
 /* State Machine -------------------------------------------------------------*/
 #define INIT 0
 #define IDLE 1
 #define SEND_VALUE 2
 #define SEND_ALERT 3
-#define SEND_SETTING 4
+#define SEND_THRESHOLD 4
+#define SEND_CMAX 5
+#define SEND_CMIN 6
 int uart_state = INIT;
 int index = 0;
 int send = 0;
@@ -33,7 +36,15 @@ void UART_DATA(void)
       }
       else if(check_Setting() == 1)
       {
-        uart_state = SEND_SETTING;
+        uart_state = SEND_THRESHOLD;
+        send = 0;
+      }
+      else if(check_Setting() == 2) {
+        uart_state = SEND_CMAX;
+        send = 0;
+      }
+      else if (check_Setting() == 3) {
+        uart_state = SEND_CMIN;
         send = 0;
       }
       break;
@@ -82,7 +93,7 @@ void UART_DATA(void)
         set_Timer(UART_TIMER, 10);
       }
       break;
-    case SEND_SETTING:
+    case SEND_THRESHOLD:
       if(send == 0)
       {
         PIC_UART_TRANSMIT_STRING("pH= ");
@@ -100,9 +111,59 @@ void UART_DATA(void)
         PIC_UART_TRANSMIT_STRING(" mg/l FLOW= ");
         PIC_UART_TRANSMIT_FLOAT(Sensor_Get_Threshold(FLOW_Sensor));
         PIC_UART_TRANSMIT_STRING(" m3/h \r\n");
-        uart_state = SEND_SETTING;
+        uart_state = SEND_THRESHOLD;
       }
-      if(check_Setting() == 0)
+      if(check_Setting() != 1)
+      {
+        uart_state = IDLE;
+      }
+      break;
+    case SEND_CMAX:
+      if(send == 0)
+      {
+        PIC_UART_TRANSMIT_STRING("pH= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MAX, pH_Sensor));
+        PIC_UART_TRANSMIT_STRING(" pH SS= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MAX, SS_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l CSB= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MAX, COD_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l TMP= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MAX, TEMP_Sensor));
+        PIC_UART_TRANSMIT_STRING(" C NH4= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MAX, NH4_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l NO3= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MAX, NO3_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l FLOW= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MAX, FLOW_Sensor));
+        PIC_UART_TRANSMIT_STRING(" m3/h \r\n");
+        uart_state = SEND_CMAX;
+      }
+      if(check_Setting() != 2)
+      {
+        uart_state = IDLE;
+      }
+      break;
+    case SEND_CMIN:
+      if(send == 0)
+      {
+        PIC_UART_TRANSMIT_STRING("pH= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MIN, pH_Sensor));
+        PIC_UART_TRANSMIT_STRING(" pH SS= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MIN, SS_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l CSB= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MIN, COD_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l TMP= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MIN, TEMP_Sensor));
+        PIC_UART_TRANSMIT_STRING(" C NH4= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MIN, NH4_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l NO3= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MIN, NO3_Sensor));
+        PIC_UART_TRANSMIT_STRING(" mg/l FLOW= ");
+        PIC_UART_TRANSMIT_FLOAT(get_calib(CALIB_MIN, FLOW_Sensor));
+        PIC_UART_TRANSMIT_STRING(" m3/h \r\n");
+        uart_state = SEND_CMIN;
+      }
+      if(check_Setting() != 3)
       {
         uart_state = IDLE;
       }
