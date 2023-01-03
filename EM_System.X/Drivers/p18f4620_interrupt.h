@@ -23,6 +23,7 @@ void PIC_INTERRUPT_INIT(void);
 void PIC_EXT_INIT(void);
 void PIC_LOW_ISR(void);
 void PIC_HIGH_ISR(void);
+int check_UART(void);
 
 #ifdef	__cplusplus
 }
